@@ -1,0 +1,51 @@
+.wrapper {
+  overflow: hidden;
+  min-width: 940px;
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maincontant {
+  height: 100%;
+  min-height: 650px;
+}
+
+.section {
+  height: 100%;
+  background-color: rgba(20,20,20,0.31);
+  min-width: 940px;
+  min-height: 650px;
+}
+
+.order__btn-link {
+  display: block;
+  text-decoration: none;
+}
+
+.order__btn-text {
+  height: rem(35px);
+  min-width: rem(98px);
+  background-color: $orange;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  line-height: rem(35px);
+  transition: .5s;
+  &:hover {
+    background-color: darken($orange, 7%);
+  }
+}
+

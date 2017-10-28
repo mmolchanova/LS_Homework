@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../fonts/lifehack/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../fonts/gagalin/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+body {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  color: #2f3234;
+  font-size: 16px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal; }
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+.wrapper {
+  overflow: hidden;
+  min-width: 940px;
+  min-height: 100%;
+  position: relative; }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.maincontant {
+  height: 100%;
+  min-height: 650px; }
+
+.section {
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.31);
+  min-width: 940px;
+  min-height: 650px; }
+
+.order__btn-link {
+  display: block;
+  text-decoration: none; }
+
+.order__btn-text {
+  height: 2.1875rem;
+  min-width: 6.125rem;
+  background-color: #e25028;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 2.1875rem;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .order__btn-text:hover {
+    background-color: #cb411b; }
+
+.general {
+  background-image: url("../img/bg/general-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative; }
+
+.general__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.3125rem; }
+
+.header__logo {
+  margin-right: auto;
+  margin-left: -0.125rem;
+  margin-top: 0.40625rem; }
+
+.nav {
+  margin-right: 0.8125rem; }
+
+.nav__item {
+  display: inline-block;
+  vertical-align: middle; }
+  .nav__item:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    background-color: #fff;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0 11px 0 16px; }
+  .nav__item:last-child:after {
+    display: none; }
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  line-height: 5;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle; }
+  .nav__link:hover {
+    text-decoration: underline; }
+
+.general__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -1%;
+  margin-left: 3.5%; }
+
+.general__img, .general__slogan {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%; }
+
+.general__slogan {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.section__title {
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin: 0 0 10px -5px;
+  padding-top: 63px; }
+
+.general__slogan-text {
+  color: #ffffff;
+  font-family: 'Lifehack';
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-left: -5px; }

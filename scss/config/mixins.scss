@@ -1,0 +1,10 @@
+@mixin circle($width, $color) {
+  width: $width;
+  background-color: $color;
+  height: $width;
+  border-radius: 50%;
+}
+
+@function rem($px) {
+  @return $px / 16px+0rem;
+}

@@ -136,13 +136,12 @@ h6 {
     background-color: #cb411b; }
 
 .arrow {
-  position: fixed;
+  position: absolute;
   -webkit-transform: translate(50%, 50%);
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
-  bottom: 15vh;
-  right: 50%;
-  z-index: 5; }
+  bottom: 10vh;
+  right: 50%; }
 
 .pagination {
   position: fixed;
@@ -150,8 +149,7 @@ h6 {
   -ms-transform: translate(31.3125rem, 5.625rem);
   transform: translate(31.3125rem, 5.625rem);
   top: 0%;
-  right: 50%;
-  z-index: 5; }
+  right: 50%; }
 
 .pagination__item {
   width: 16px;

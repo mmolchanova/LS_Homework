@@ -140,22 +140,24 @@ h6 {
   -webkit-transform: translate(50%, 50%);
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
-  bottom: 40px;
-  right: 50%; }
+  bottom: 15vh;
+  right: 50%;
+  z-index: 5; }
 
 .pagination {
   position: fixed;
-  -webkit-transform: translate(31.3125rem, -10.9375rem);
-  -ms-transform: translate(31.3125rem, -10.9375rem);
-  transform: translate(31.3125rem, -10.9375rem);
-  top: 50%;
-  right: 50%; }
+  -webkit-transform: translate(31.3125rem, 5.625rem);
+  -ms-transform: translate(31.3125rem, 5.625rem);
+  transform: translate(31.3125rem, 5.625rem);
+  top: 0%;
+  right: 50%;
+  z-index: 5; }
 
 .pagination__item {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border-color: 1px solid transparent;
+  border: 1px solid transparent;
   margin-bottom: 5.5px; }
   .pagination__item:after {
     content: '';
@@ -165,7 +167,7 @@ h6 {
     height: 6px;
     border-radius: 50%;
     position: relative;
-    top: -3px;
+    top: -4px;
     left: 7px;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);

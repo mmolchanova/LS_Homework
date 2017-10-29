@@ -52,29 +52,31 @@
 .arrow {
   position: fixed;
   transform: translate(50%, 50%);
-  bottom: 40px;
+  bottom: 15vh;
   right: 50%;
+  z-index: 5;
 }
 
 .pagination {
   position: fixed;
-  transform: translate(rem(501px), rem(-175px));
-  top: 50%;
+  transform: translate(rem(501px), rem(90px));
+  top: 0%;
   right: 50%;
+  z-index: 5;
 }
 
 .pagination__item {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border-color: 1px solid transparent;
+  border: 1px solid transparent;
   margin-bottom: 5.5px;
   &:after {
     content: '';
     display: inline-block;
     @include circle(6px, #fff);
     position: relative;
-    top: -3px;
+    top: -4px;
     left: 7px;
     transform: translate(-50%, -50%);
   }

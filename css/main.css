@@ -135,6 +135,45 @@ h6 {
   .order__btn-text:hover {
     background-color: #cb411b; }
 
+.arrow {
+  position: fixed;
+  -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+  bottom: 40px;
+  right: 50%; }
+
+.pagination {
+  position: fixed;
+  -webkit-transform: translate(31.3125rem, -10.9375rem);
+  -ms-transform: translate(31.3125rem, -10.9375rem);
+  transform: translate(31.3125rem, -10.9375rem);
+  top: 50%;
+  right: 50%; }
+
+.pagination__item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border-color: 1px solid transparent;
+  margin-bottom: 5.5px; }
+  .pagination__item:after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    background-color: #fff;
+    height: 6px;
+    border-radius: 50%;
+    position: relative;
+    top: -3px;
+    left: 7px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.pagination__item:hover, .pagination__item--active {
+  border: 1px solid #fff; }
+
 .general {
   background-image: url("../img/bg/general-bg.jpg");
   background-repeat: no-repeat;

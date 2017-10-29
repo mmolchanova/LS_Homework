@@ -49,3 +49,37 @@
   }
 }
 
+.arrow {
+  position: fixed;
+  transform: translate(50%, 50%);
+  bottom: 40px;
+  right: 50%;
+}
+
+.pagination {
+  position: fixed;
+  transform: translate(rem(501px), rem(-175px));
+  top: 50%;
+  right: 50%;
+}
+
+.pagination__item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border-color: 1px solid transparent;
+  margin-bottom: 5.5px;
+  &:after {
+    content: '';
+    display: inline-block;
+    @include circle(6px, #fff);
+    position: relative;
+    top: -3px;
+    left: 7px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.pagination__item:hover, .pagination__item--active {
+  border: 1px solid #fff;
+}

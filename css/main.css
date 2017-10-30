@@ -152,7 +152,7 @@ h6 {
   height: 16px;
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: 5.5px; }
+  margin-bottom: 6px; }
   .pagination__item:after {
     content: '';
     display: inline-block;

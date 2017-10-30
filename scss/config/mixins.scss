@@ -5,6 +5,27 @@
   border-radius: 50%;
 }
 
+@mixin btn($color) {
+  display: block;
+  text-decoration: none;
+  height: rem(35px);
+  min-width: rem(98px);
+  background-color: $color;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  line-height: rem(35px);
+  transition: .5s;
+  &:hover {
+    background-color: darken($color, 7%);
+  }
+}
+
+
 @function rem($px) {
   @return $px / 16px+0rem;
 }

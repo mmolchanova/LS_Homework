@@ -115,9 +115,7 @@ h6 {
 
 .order__btn-link {
   display: block;
-  text-decoration: none; }
-
-.order__btn-text {
+  text-decoration: none;
   height: 2.1875rem;
   min-width: 6.125rem;
   background-color: #e25028;
@@ -132,16 +130,14 @@ h6 {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
-  .order__btn-text:hover {
+  .order__btn-link:hover {
     background-color: #cb411b; }
 
-.arrow {
-  position: absolute;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
-  bottom: 10vh;
-  right: 50%; }
+.section__title {
+  font-family: 'Gagalin';
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.42; }
 
 .pagination {
   position: fixed;
@@ -200,6 +196,12 @@ h6 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.general__arrow {
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  margin-top: 10%; }
 
 .header {
   display: -webkit-box;
@@ -301,20 +303,171 @@ h6 {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.section__title {
-  color: #f9b43b;
-  font-family: 'Gagalin';
-  font-size: 72px;
-  font-weight: 400;
-  line-height: 1.42;
+.section__title--general {
+  color: #e25028;
   margin: 0 0 14px -5px;
   padding-top: 55px; }
 
 .general__slogan-text {
-  color: #ffffff;
+  color: #fff;
   font-family: 'Lifehack';
   font-weight: 500;
   font-size: 65px;
   line-height: 0.95;
   letter-spacing: -0.03em;
   margin-left: -5px; }
+
+.best {
+  background-image: url("../img/bg/best-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative; }
+
+.best__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3.375rem; }
+
+.section__title--best {
+  color: #2f3234; }
+
+.best__title {
+  font-size: 24px;
+  font-family: 'Lifehack';
+  margin-top: 1.25rem;
+  margin-bottom: 0.9375rem;
+  text-align: center; }
+
+.best__text {
+  font-size: 14px;
+  font-family: 'Ubuntu';
+  text-align: center; }
+
+.best__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3.375rem; }
+
+.best__item {
+  width: 30.5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.75rem 0 0.75rem; }
+
+.comments__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.comments__item {
+  height: 20.3125rem;
+  width: 25%;
+  position: relative; }
+
+.comments__block {
+  display: none;
+  position: absolute;
+  padding: 2.8125rem 1.25rem;
+  color: #fff; }
+
+.comments__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+  .comments__img:hover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  .comments__img:hover .comments__block {
+    display: block;
+    position: absolute; }
+
+.block__btn-link {
+  display: block;
+  text-decoration: none;
+  height: 2.1875rem;
+  min-width: 6.125rem;
+  background-color: #2f3234;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 2.1875rem;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  width: 6.875rem; }
+  .block__btn-link:hover {
+    background-color: #1e2021; }
+
+.block__title {
+  font-family: 'Gagalin';
+  font-size: 14px;
+  margin-bottom: 1.25rem; }
+
+.block__text {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 0.75rem; }

@@ -7,12 +7,14 @@
 
 @mixin btn($color) {
   display: block;
-  text-decoration: none;
+  border: none;
   height: rem(35px);
   min-width: rem(98px);
   background-color: $color;
   color: #fff;
   text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 300;
   border-radius: 5px;
   font-size: 13px;
   font-weight: 500;

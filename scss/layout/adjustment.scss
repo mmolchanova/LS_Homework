@@ -20,14 +20,10 @@
 }
 
 .section {
-  height: 100%;
   background-color: rgba(20,20,20,0.31);
   min-width: 940px;
   min-height: 650px;
-}
-
-.order__btn-link {
-  @include btn($orange);
+  height: 100vh;
 }
 
 .section__title {
@@ -42,6 +38,7 @@
   transform: translate(rem(501px), rem(90px));
   top: 0%;
   right: 50%;
+  z-index: 2;
 }
 
 .pagination__item {
@@ -49,13 +46,13 @@
   height: 16px;
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   &:after {
     content: '';
     display: inline-block;
     @include circle(6px, #fff);
     position: relative;
-    top: -4px;
+    top: -3px;
     left: 7px;
     transform: translate(-50%, -50%);
   }

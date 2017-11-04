@@ -48,7 +48,7 @@
     display: inline-block;
     vertical-align: middle;
     @include circle(4px, #fff);
-    margin: 0 11px 0 16px;
+    margin: 0 14px 0 15px;
   }
   &:last-child:after {
     display: none;
@@ -67,6 +67,10 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+.order__btn {
+  @include btn($orange);
 }
 
 .general__content {
@@ -91,7 +95,7 @@
 }
 
 .section__title--general {
-  color: $orange;
+  color: $yellow;
   margin: 0 0 14px -5px;
   padding-top: 55px;
 }

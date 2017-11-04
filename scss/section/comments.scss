@@ -1,4 +1,13 @@
+.comments__container {
+  height: 100%;
+}
+
+.comments__content {
+  height: 100%;
+}
+
 .comments__list {
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +16,7 @@
 }
 
 .comments__item {
-  height: rem(325px);
+  height: 50%;
   width: 25%;
   position: relative;
 }
@@ -24,6 +33,9 @@
   height: 100%;
   overflow: hidden;
   filter: grayscale(100%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   &:hover:before {
     content: '';
     display: block;
@@ -40,7 +52,7 @@
   }
 }
 
-.block__btn-link {
+.block__btn {
   @include btn($dark);
   width: rem(110px);
 }

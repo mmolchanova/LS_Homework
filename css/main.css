@@ -108,30 +108,10 @@ h6 {
   min-height: 650px; }
 
 .section {
-  height: 100%;
   background-color: rgba(20, 20, 20, 0.31);
   min-width: 940px;
-  min-height: 650px; }
-
-.order__btn-link {
-  display: block;
-  text-decoration: none;
-  height: 2.1875rem;
-  min-width: 6.125rem;
-  background-color: #e25028;
-  color: #fff;
-  text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 2.1875rem;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-  .order__btn-link:hover {
-    background-color: #cb411b; }
+  min-height: 650px;
+  height: 100vh; }
 
 .section__title {
   font-family: 'Gagalin';
@@ -145,14 +125,15 @@ h6 {
   -ms-transform: translate(31.3125rem, 5.625rem);
   transform: translate(31.3125rem, 5.625rem);
   top: 0%;
-  right: 50%; }
+  right: 50%;
+  z-index: 2; }
 
 .pagination__item {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: 6px; }
+  margin-bottom: 5px; }
   .pagination__item:after {
     content: '';
     display: inline-block;
@@ -161,7 +142,7 @@ h6 {
     height: 6px;
     border-radius: 50%;
     position: relative;
-    top: -4px;
+    top: -3px;
     left: 7px;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -243,7 +224,7 @@ h6 {
     background-color: #fff;
     height: 4px;
     border-radius: 50%;
-    margin: 0 11px 0 16px; }
+    margin: 0 14px 0 15px; }
   .nav__item:last-child:after {
     display: none; }
 
@@ -258,6 +239,28 @@ h6 {
   vertical-align: middle; }
   .nav__link:hover {
     text-decoration: underline; }
+
+.order__btn {
+  display: block;
+  border: none;
+  height: 2.1875rem;
+  min-width: 6.125rem;
+  background-color: #e25028;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 2.1875rem;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .order__btn:hover {
+    background-color: #cb411b; }
 
 .general__content {
   width: 100%;
@@ -304,7 +307,7 @@ h6 {
   justify-content: center; }
 
 .section__title--general {
-  color: #e25028;
+  color: #f8b43a;
   margin: 0 0 14px -5px;
   padding-top: 55px; }
 
@@ -353,7 +356,9 @@ h6 {
 .best__text {
   font-size: 14px;
   font-family: 'Ubuntu';
-  text-align: center; }
+  font-weight: 300;
+  text-align: center;
+  width: 100%; }
 
 .best__list {
   display: -webkit-box;
@@ -388,7 +393,14 @@ h6 {
   align-items: center;
   margin: 0 0.75rem 0 0.75rem; }
 
+.comments__container {
+  height: 100%; }
+
+.comments__content {
+  height: 100%; }
+
 .comments__list {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -410,7 +422,7 @@ h6 {
   flex-wrap: wrap; }
 
 .comments__item {
-  height: 20.3125rem;
+  height: 50%;
   width: 25%;
   position: relative; }
 
@@ -425,7 +437,10 @@ h6 {
   height: 100%;
   overflow: hidden;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
   .comments__img:hover:before {
     content: '';
     display: block;
@@ -439,14 +454,16 @@ h6 {
     display: block;
     position: absolute; }
 
-.block__btn-link {
+.block__btn {
   display: block;
-  text-decoration: none;
+  border: none;
   height: 2.1875rem;
   min-width: 6.125rem;
   background-color: #2f3234;
   color: #fff;
   text-transform: uppercase;
+  font-family: 'Ubuntu';
+  font-weight: 300;
   border-radius: 5px;
   font-size: 13px;
   font-weight: 500;
@@ -457,7 +474,7 @@ h6 {
   -o-transition: .5s;
   transition: .5s;
   width: 6.875rem; }
-  .block__btn-link:hover {
+  .block__btn:hover {
     background-color: #1e2021; }
 
 .block__title {
@@ -471,3 +488,5 @@ h6 {
   font-size: 14px;
   line-height: 1.75;
   margin-bottom: 0.75rem; }
+
+/*# sourceMappingURL=main.css.map */

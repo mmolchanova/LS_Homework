@@ -15,10 +15,10 @@
   text-transform: uppercase;
   font-family: 'Ubuntu';
   font-weight: 300;
-  border-radius: 5px;
-  font-size: 13px;
+  border-radius: rem(5px);
+  font-size: rem(13px);
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: rem(5px);
   text-align: center;
   line-height: rem(35px);
   transition: .5s;

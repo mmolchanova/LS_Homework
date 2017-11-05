@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Burger</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -12,7 +13,7 @@
     <div class="maincontent">
 
       <ul class="pagination">
-        <li class="pagination__item pagination__item--active"></дш>
+        <li class="pagination__item pagination__item--active"></li>
         <li class="pagination__item"></li>
         <li class="pagination__item"></li>
         <li class="pagination__item"></li>
@@ -29,7 +30,7 @@
             <div class="header__logo">
               <img src="img/logo.png" alt="Mr.Burger" class="logo__img">
             </div>
-            <nav class="nav">
+            <nav class="header__nav">
               <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="1">о нас</a></li>
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="2">бургеры</a></li>
@@ -40,11 +41,16 @@
               </ul>
             </nav>
             <button type="button" class="order__btn">заказать</button>
+            <button type="button" class="header__burger-btn">
+              <span class="burger-btn__line"></span>
+              <span class="burger-btn__line"></span>
+              <span class="burger-btn__line"></span>
+            </button>
           </header>
 
           <div class="general__content">
             <div class="general__img">
-              <img src="img/content/burger.png" alt="Burger">
+              <img class="general__img-pic" src="img/content/burger.png" alt="Burger">
             </div>
             <div class="general__slogan">
               <h2 class="section__title section__title--general">мы делаем</h2>
@@ -52,13 +58,12 @@
             </div>
           </div>
 
-          <div class="general__arrow">
-            <img src="img/arrow-scroll.png" alt="Next" class="arrow__img">
-          </div>
+          <svg class="arrow__img">
+            <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
+          </svg>
+
         </div>
       </section>
-
-
 
       <section class="section best">
         <div class="container best__container">
@@ -67,19 +72,135 @@
             <h2 class="section__title section__title--best">мы лучшие</h2>
             <ul class="best__list">
               <li class="best__item">
-                <div class="best__img"><img src="img/content/meat.png" alt="Meat"></div>
-                <div class="best__title">100% свежее мясо</div>
-                <div class="best__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+                <svg class="best__img best__img--meat">
+                  <use xlink:href="img/sprite/sprite.svg#meat" />
+                </svg>
+                <div class="best__desc">
+                  <div class="best__desc-title">100% свежее мясо</div>
+                  <div class="best__desc-text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                  </div>
+                </div>
               </li>
               <li class="best__item">
-                <div class="best__img"><img src="img/content/hand.png" alt="Hand"></div>
-                <div class="best__title">Ручная  сборка</div>
-                <div class="best__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+                <svg class="best__img best__img--hand">
+                  <use xlink:href="img/sprite/sprite.svg#hand" />
+                </svg>
+                <div class="best__desc">
+                  <div class="best__desc-title">Ручная  сборка</div>
+                  <div class="best__desc-text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                  </div>
+                </div>
               </li>
               <li class="best__item">
-                <div class="best__img"><img src="img/content/natural.png" alt="Natural"></div>
-                <div class="best__title">Натуральные ингредиенты</div>
-                <div class="best__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+                <svg class="best__img best__img--natural">
+                  <use xlink:href="img/sprite/sprite.svg#natural" />
+                </svg>
+                <div class="best__desc">
+                  <div class="best__desc-title">Натуральные ингредиенты</div>
+                  <div class="best__desc-text"><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section team">
+        <div class="team__container">
+
+          <div class="team__content">
+            <h2 class="section__title section__title--team">команда</h2>
+            <ul class="team__list">
+              <li class="team__item">
+                <a class="team__item-title" href="#">Дэниэл Редклиф</a>
+                <div class="team__item-content">
+                  <div class="item-content__img" style="background-image: url(img/content/aphex.jpg); background-position: 50% 50%;">
+                    <img src="img/content/aphex.jpg" alt="Дэниэл Редклиф" class="team__img-pic visually-hidden">
+                  </div>
+                  <div class="item-content__desc">
+                    <div class="item-content__title">Оператор</div>
+                    <div class="item-content__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__item team__item--active">
+                <a class="team__item-title" href="#">Ричард Джеймс</a>
+                <div class="team__item-content">
+                  <div class="item-content__img" style="background-image: url(img/content/aphex.jpg); background-position: 50% 50%;">
+                    <img src="img/content/aphex.jpg" alt="Ричард Джеймс" class="item-content__img-pic visually-hidden">
+                  </div>
+                  <div class="item-content__desc">
+                    <div class="item-content__title">Оператор</div>
+                    <div class="item-content__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__item">
+                <a class="team__item-title" href="#">Джейк Финн</a>
+                <div class="team__item-content">
+                  <div class="item-content__img" style="background-image: url(img/content/aphex.jpg); background-position: 50% 50%;">
+                    <img src="img/content/aphex.jpg" alt="Джейк Финн" class="team__img-pic visually-hidden">
+                  </div>
+                  <div class="item-content__desc">
+                    <div class="item-content__title">Оператор</div>
+                    <div class="item-content__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__item">
+                <a class="team__item-title" href="#">Николай Иванов</a>
+                <div class="team__item-content">
+                  <div class="item-content__img" style="background-image: url(img/content/aphex.jpg); background-position: 50% 50%;">
+                    <img src="img/content/aphex.jpg" alt="Николай Иванов" class="team__img-pic visually-hidden">
+                  </div>
+                  <div class="item-content__desc">
+                    <div class="item-content__title">Оператор</div>
+                    <div class="item-content__text"><p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section menu">
+        <div class="menu__container">
+
+          <div class="menu__content">
+            <h2 class="section__title section__title--menu">меню</h2>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__item-link" href="#" style="background-image: url('img/bg/meats.jpg'); background-position: 75% 50%; background-size: cover;"><div class="menu__item-title">Для мясоедов</div></a>
+                <div class="menu__item-content">
+                  <div class="item-content__text-menu"><p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#" style="background-image: url('img/bg/vegans.jpg'); background-position: 90% 50%; background-size: cover;"><div class="menu__item-title">Вегетарианское</div></a>
+                <div class="menu__item-content">
+                  <div class="item-content__text-menu"><p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#" style="background-image: url('img/bg/diets.jpg'); background-position: 100% 50%; background-size: cover;"><div class="menu__item-title">Диетическое</div></a>
+                <div class="menu__item-content">
+                  <div class="item-content__text-menu"><p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -97,8 +218,9 @@
                   <img src="img/content/photo1.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -107,8 +229,9 @@
                   <img src="img/content/photo2.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -117,8 +240,9 @@
                   <img src="img/content/photo3.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -127,8 +251,9 @@
                   <img src="img/content/photo4.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -137,8 +262,9 @@
                   <img src="img/content/photo5.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -147,8 +273,9 @@
                   <img src="img/content/photo6.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -157,8 +284,9 @@
                   <img src="img/content/photo7.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>
@@ -167,8 +295,9 @@
                   <img src="img/content/photo8.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
                   <div class="comments__block">
                     <div class="block__title">Константин Спилберг</div>
-                    <div class="block__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                    <div class="block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                     <button type="button" class="block__btn">подробнее</button>
+                    <button type="button" class="block__btn-mobile">читать отзыв</button>
                   </div>
                 </div>
               </li>

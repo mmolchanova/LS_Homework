@@ -7,19 +7,12 @@
 }
 
 .general__container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
-
-
-.general__arrow {
-  transform: translate(0%, 0%);
-  margin-top: 10%;
-}
-
 
 .header {
   display: flex;
@@ -36,8 +29,12 @@
   margin-top: rem(6.5px);
 }
 
-.nav {
+.header__nav {
   margin-right: rem(13px);
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -47,8 +44,8 @@
     content: '';
     display: inline-block;
     vertical-align: middle;
-    @include circle(4px, #fff);
-    margin: 0 14px 0 15px;
+    @include circle(rem(4px), #fff);
+    margin: 0 rem(14px) 0 rem(15px);
   }
   &:last-child:after {
     display: none;
@@ -58,7 +55,7 @@
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 5;
   text-transform: uppercase;
@@ -71,41 +68,123 @@
 
 .order__btn {
   @include btn($orange);
+
+  @include tablets {
+    padding: 0 rem(20px);
+  }
+
+  @include phones {
+    padding: 0 rem(25px);
+    height: rem(39px);
+  }
+}
+
+.header__burger-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin: rem(6px) rem(15px) 0 rem(24px);
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include phones {
+    margin: rem(6px) 0 0 rem(24px);
+  }
+}
+
+.burger-btn__line {
+  background-color: #fff;
+  display: block;
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .general__content {
   width: 100%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
-  margin-top: -1%;
+  margin-top: -11%;
   margin-left: 3.5%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12vh;
+    margin-left: -3%;
+  }
+
+  @include phones {
+    flex-direction: column;
+    margin-top: 4.5vh;
+    width: rem(410px);
+  }
 }
 
 .general__img, .general__slogan {
   display: flex;
   flex-basis: 50%;
+  width: 100%;
+
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.general__img-pic {
+  max-width: 100%;
+  margin-left: rem(-5px);
+
+  @include tablets {
+    margin: 0 auto;
+  }
+
+  @include phones {
+    margin-left: rem(2px);
+  }
 }
 
 .general__slogan {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: rem(-5px);
+
+  @include tablets {
+    width: rem(420px);
+    text-align: center;
+  }
 }
 
 .section__title--general {
   color: $yellow;
-  margin: 0 0 14px -5px;
-  padding-top: 55px;
+  padding-top: rem(63px);
+  margin-bottom: rem(9px);
+
+  @include tablets {
+    padding-top: 0;
+    margin-top: rem(25px);
+    margin-bottom: rem(12px);
+  }
+  @include phones {
+    margin-top: rem(38px);
+    margin-bottom: rem(-5px);
+    font-size: rem(72px);
+  }
 }
 
 .general__slogan-text {
   color: #fff;
   font-family: 'Lifehack';
   font-weight: 500;
-  font-size: 65px;
+  font-size: rem(65px);
   line-height: 0.95;
   letter-spacing: -0.03em;
-  margin-left: -5px;
 }

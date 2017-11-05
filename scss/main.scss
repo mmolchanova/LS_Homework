@@ -1,4 +1,5 @@
 //config
+@import "config/media";
 @import "config/variables";
 @import "config/mixins";
 
@@ -11,3 +12,5 @@
 @import "section/general";
 @import "section/best";
 @import "section/comments";
+@import "section/team";
+@import "section/menu";

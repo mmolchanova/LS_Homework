@@ -6,46 +6,158 @@
   position: relative;
 }
 
+.best__container {
+  height: 100%;
+  justify-content: flex-start;
+  padding-top: 11.2vh;
+
+  @include tablets {
+    padding-top: 21vh;
+  }
+
+  @include phones {
+    padding-top: 4.5vh;
+  }
+}
+
 .best__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: rem(54px);
-}
 
+  @include tablets {
+    padding-right: rem(12px);
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
 
 .section__title--best {
   color: $dark;
+  margin-bottom: rem(6px);
 }
-
-.best__title {
-  font-size: 24px;
-  font-family: 'Lifehack';
-  margin-top: rem(20px);
-  margin-bottom: rem(15px);
-  text-align: center;
-}
-
-.best__text {
-  font-size: 14px;
-  font-family: 'Ubuntu';
-  font-weight: 300;
-  text-align: center;
-  width: 100%;
-}
-
 
 .best__list {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: rem(54px);
+  width: 100%;
+
+  @include tablets {
+    margin-top: rem(150px);
+  }
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(30px);
+  }
 }
 
 .best__item {
-  width: 30.5%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  margin: 0 rem(12px) 0 rem(12px);
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+  }
+
+  @include phones {
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: rem(13px);
+  }
+}
+
+.best__desc {
+  display: flex;
+  flex-direction: column;
+
+  @include phones {
+    margin-left: rem(30px);
+    flex: 3;
+  }
+}
+
+.best__desc-title {
+  font-size: rem(24px);
+  font-family: 'Lifehack';
+  margin-top: rem(28px);
+  margin-bottom: rem(1px);
+  text-align: center;
+  line-height: 1.85rem;
+
+  @include phones {
+    white-space: nowrap;
+    text-align: left;
+    margin-bottom: rem(6px);
+  }
+}
+
+.best__desc-text {
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  line-height: 1.5rem;
+
+  @include phones {
+    text-align: left;
+    line-height: 1.7rem;
+  }
+}
+
+
+
+.best__img {
+  width: rem(95px);
+  height: rem(90px);
+  &--meat {
+    fill: $orange;
+    margin: rem(-22px) rem(2px) 0 0;
+  }
+  &--hand {
+    fill: $yellow;
+    margin: 0 0 rem(4px) 0;
+  }
+  &--natural {
+    fill: $green;
+    width: rem(90px);
+    height: rem(85px);
+    margin: rem(-20px) 0 rem(10px) 0;
+  }
+
+  @include tablets {
+    width: rem(100px);
+    height: rem(100px);
+  }
+
+  @include phones {
+    max-width: rem(200px);
+    max-height: rem(190px);
+    margin: 0;
+    flex: 1;
+
+    &--hand {
+      margin: rem(-35px) 0 0 0;
+    }
+
+    &--natural {
+      max-width: rem(100px);
+      max-height: rem(100px);
+      flex: 1;
+      margin: rem(-48px) rem(10px) 0 rem(10px);
+    }
+  }
 }

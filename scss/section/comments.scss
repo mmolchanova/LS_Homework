@@ -29,11 +29,12 @@
 .comments__block {
   display: none;
   position: absolute;
-  padding: rem(47px) rem(20px);
+  padding: 8.2vh 1.8vw;
   color: #fff;
 
   @include tablets {
-   padding: rem(34px) rem(58px);
+    padding: 6.65vh 6.9vw;
+    text-align: center;
   }
 
   @include phones {
@@ -123,9 +124,9 @@
 
 .block__btn-mobile {
   display: none;
-  @include btn($dark);
 
   @include phones {
+    @include btn($dark);
     display: block;
     width: rem(145px);
     height: rem(41px);

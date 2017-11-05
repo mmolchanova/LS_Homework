@@ -675,11 +675,12 @@ h6 {
 .comments__block {
   display: none;
   position: absolute;
-  padding: 2.9375rem 1.25rem;
+  padding: 8.2vh 1.8vw;
   color: #fff; }
   @media screen and (max-width: 768px) {
     .comments__block {
-      padding: 2.125rem 3.625rem; } }
+      padding: 6.65vh 6.9vw;
+      text-align: center; } }
   @media screen and (max-width: 480px) {
     .comments__block {
       padding-top: 2.8125rem; } }
@@ -779,33 +780,33 @@ h6 {
       display: none; } }
 
 .block__btn-mobile {
-  display: none;
-  display: block;
-  border: none;
-  height: 2.1875rem;
-  min-width: 6.125rem;
-  background-color: #2f3234;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Ubuntu';
-  font-weight: 300;
-  border-radius: 0.3125rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  border-radius: 0.3125rem;
-  text-align: center;
-  line-height: 2.1875rem;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-  .block__btn-mobile:hover {
-    background-color: #1e2021; }
+  display: none; }
   @media screen and (max-width: 480px) {
     .block__btn-mobile {
       display: block;
+      border: none;
+      height: 2.1875rem;
+      min-width: 6.125rem;
+      background-color: #2f3234;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Ubuntu';
+      font-weight: 300;
+      border-radius: 0.3125rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      border-radius: 0.3125rem;
+      text-align: center;
+      line-height: 2.1875rem;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      display: block;
       width: 9.0625rem;
       height: 2.5625rem;
-      margin-left: 0.1875rem; } }
+      margin-left: 0.1875rem; }
+      .block__btn-mobile:hover {
+        background-color: #1e2021; } }
 
 .team {
   background-image: url("../img/bg/team-bg.jpg");

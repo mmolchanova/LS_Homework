@@ -93,6 +93,12 @@
   @include phones {
     margin: rem(6px) 0 0 rem(24px);
   }
+
+  &:hover .burger-btn__line {
+    height: 5px;
+    border-radius: 2.5px;
+    transition: 0.2s;
+  }
 }
 
 .burger-btn__line {
@@ -111,8 +117,9 @@
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
-  margin-top: -11%;
-  margin-left: 3.5%;
+  justify-content: center;
+  margin-top: -6vh;
+  margin-left: 2.5%;
 
   @include tablets {
     flex-direction: column;
@@ -125,13 +132,13 @@
     flex-direction: column;
     margin-top: 4.5vh;
     width: rem(410px);
+    max-width: 100vw;
   }
 }
 
 .general__img, .general__slogan {
   display: flex;
   flex-basis: 50%;
-  width: 100%;
 
   @include tablets {
     align-items: center;
@@ -140,14 +147,15 @@
 
 .general__img-pic {
   max-width: 100%;
-  margin-left: rem(-5px);
-
+  max-height: 80vh;
+  margin-top: -10vh;
   @include tablets {
     margin: 0 auto;
   }
 
   @include phones {
     margin-left: rem(2px);
+    max-width: 90vw;
   }
 }
 
@@ -155,28 +163,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   margin-left: rem(-5px);
+  max-width: 100%;
+
 
   @include tablets {
     width: rem(420px);
+    align-items: center;
     text-align: center;
   }
 }
 
 .section__title--general {
-  color: $yellow;
-  padding-top: rem(63px);
-  margin-bottom: rem(9px);
 
-  @include tablets {
-    padding-top: 0;
-    margin-top: rem(25px);
-    margin-bottom: rem(12px);
-  }
+
   @include phones {
-    margin-top: rem(38px);
-    margin-bottom: rem(-5px);
-    font-size: rem(72px);
+    text-align: center;
+    font-size: 13.125vw;
   }
 }
 
@@ -186,5 +190,9 @@
   font-weight: 500;
   font-size: rem(65px);
   line-height: 0.95;
-  letter-spacing: -0.03em;
+  margin-top: rem(-50px);
+
+  @include phones {
+    font-size: 11.25vw;
+  }
 }

@@ -23,19 +23,8 @@
 
 .section__title--menu {
   position: absolute;
-  top: 13.5%;
+  top: 13.5vh;
   left: 8.5%;
-  color: #fff;
-
-  @include tablets {
-    top: 9.5%;
-   left: 3.5%;
-  }
-
-  @include phones {
-    top: 4%;
-   left: 11%;
-  }
 }
 
 .menu__list {
@@ -68,6 +57,14 @@
     width: 100%;
     height: 100%;
     background: rgba(#141414,0.7);
+  }
+
+  &:hover:before {
+    background: rgba(#141414,0.85);
+  }
+
+  @include phones {
+    max-width: 16.7vw;
   }
 }
 

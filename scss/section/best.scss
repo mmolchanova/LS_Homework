@@ -6,44 +6,22 @@
   position: relative;
 }
 
-.best__container {
-  height: 100%;
-  justify-content: flex-start;
-  padding-top: 11.2vh;
-
-  @include tablets {
-    padding-top: 21vh;
-  }
-
-  @include phones {
-    padding-top: 4.5vh;
-  }
-}
-
 .best__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include tablets {
-    padding-right: rem(12px);
-  }
+  padding-bottom: 16vh;
 
   @include phones {
-    padding: 0;
+    min-width: rem(300px);
+    max-width: 100vw;
   }
-}
-
-.section__title--best {
-  color: $dark;
-  margin-bottom: rem(6px);
 }
 
 .best__list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: rem(54px);
   width: 100%;
 
   @include tablets {
@@ -84,8 +62,10 @@
   flex-direction: column;
 
   @include phones {
-    margin-left: rem(30px);
+    margin-left: rem(10px);
     flex: 3;
+    max-width: 70vw;
+
   }
 }
 
@@ -98,7 +78,6 @@
   line-height: 1.85rem;
 
   @include phones {
-    white-space: nowrap;
     text-align: left;
     margin-bottom: rem(6px);
   }
@@ -144,20 +123,20 @@
   }
 
   @include phones {
-    max-width: rem(200px);
-    max-height: rem(190px);
+    max-width: 41.67vw;
+    max-height: 39.58vw;
     margin: 0;
     flex: 1;
 
     &--hand {
-      margin: rem(-35px) 0 0 0;
+      margin: 7.3vw 0 0 0;
     }
 
     &--natural {
-      max-width: rem(100px);
-      max-height: rem(100px);
+      max-width: 20.84vw;
+      max-height: 20.84vw;
       flex: 1;
-      margin: rem(-48px) rem(10px) 0 rem(10px);
+      margin: -10vw 2.08vw 0 2.08vw;
     }
   }
 }

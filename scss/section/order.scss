@@ -11,15 +11,15 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-bottom: rem(76px);
 }
 
 .form {
   width: 100%;
-}
 
-.section__title--order {
-  color: $yellow;
-  margin-bottom: rem(6px);
+  @include tablets {
+    max-width: rem(505px);
+  }
 }
 
 .form__elem {
@@ -35,8 +35,14 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin-right: rem(15px);
+
+  &:last-child {
+      margin: 0;
+    }
 
   @include tablets {
+    margin-right: 0;
     width: 100%;
   }
 }
@@ -50,12 +56,26 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: rem(20px);
+  margin-right: rem(17px);
 
-  @include tablets {
-    &:last-child {
+  &:last-child {
       margin-right: 0;
     }
+
+  // @include tablets {
+  //   margin-right: rem(24px);
+  // }
+
+  @include phones {
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}
+
+.form__block--no-phones {
+  @include phones {
+      display: none;
   }
 }
 
@@ -74,19 +94,26 @@
   font-size: rem(14px);
   font-family: 'Ubuntu';
   font-weight: 300;
-  color: #fff
+  color: #fff;
+  margin-bottom: rem(5px);
 }
 
 .form__input {
-  height: rem(35px);
+  height: rem(36px);
   width: 100%;
   border: rem(1px) solid $dark;
   border-radius: rem(5px);
+  margin-bottom: rem(15px);
+  padding: 0 rem(10px);
 
   &:focus {
     outline: none;
-    border-color: $orange;
+    border: rem(2px) solid $yellow;
   }
+
+  // @include tablets {
+  //   margin-bottom: rem(17px);
+  // }
 }
 
 .form__textarea {
@@ -94,30 +121,40 @@
   resize: none;
 }
 
+.buttons__row {
+  margin-bottom: rem(18px);
+}
+
 .buttons__radio-label {
   position: relative;
+  margin-right: rem(18px);
 
   &:before {
     content: "";
-    width: rem(18px);
-    height: rem(18px);
+    width: rem(17px);
+    height: rem(17px);
     border-radius: 50%;
     border: rem(1px) solid $dark;
     background-color: #fff;
     display: inline-flex;
     position: relative;
+    margin-right: rem(10px);
   }
 
   &:after {
     content: "";
     position: absolute;
-    left: rem(9px);
-    top: rem(0px);
+    left: rem(8px);
+    top: rem(-1px);
     transform: translate(-50%, 50%);
     width: 0;
     height: 0;
     border-radius: 50%;
     background: $orange;
+
+    @include tablets {
+      top: rem(0.5px);
+    }
   }
 
   .buttons__radio-elem:focus+&:before {
@@ -141,7 +178,8 @@
     background-color: #fff;
     display: inline-flex;
     position: relative;
-    padding: 0 0 rem(3px) rem(2px);
+    padding: 0 0 0 rem(2px);
+    margin-right: rem(10px);
   }
 
   .buttons__check-elem:focus+&:before {
@@ -159,12 +197,12 @@
   @include btn($orange);
   outline: none;
   border: rem(1px) dotted transparent;
+  margin-left: rem(2px);
 
   &:focus {
     border: rem(1px) dotted #fff;
   }
 }
-
 
 .buttons__btn-elem-reset {
   outline: none;
@@ -196,73 +234,3 @@
     border: rem(1px) solid #fff;
   }
 }
-
-
-
-
-
-
-
-// .buttons__radio-label {
-//   &:before {
-//     content: "";
-//     width: rem(18px);
-//     height: rem(18px);
-//     border-radius: 50%;
-//     border: rem(1px) solid $dark;
-//     background-color: #fff;
-//     display: inline-flex;
-//     position: relative;
-//   }
-
-//   &:after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     width: 0;
-//     height: 0;
-//     border-radius: 50%;
-//     background: $orange;
-//   }
-
-//   .buttons__radio-elem:focus+&:before {
-//     border: rem(1px) solid $orange;
-//   }
-
-//   .buttons__radio-elem:focus+&:after, .buttons__radio-elem:checked+&:after {
-//     width: rem(7px);
-//     height: rem(7px);
-//   }
-// }
-
-// .buttons__check-label {
-//   &:before {
-//     content: "";
-//     width: rem(18px);
-//     height: rem(18px);
-//     border: rem(1px) solid $dark;
-//     background-color: #fff;
-//     display: inline-flex;
-//     position: relative;
-//   }
-
-//   &:after {
-//     content: "\2714";
-//     color: transparent;
-//     position: absolute;
-//     font-weight: 900;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-
-//   .buttons__check-elem:focus+&:before {
-//     border: rem(1px) solid $orange;
-//   }
-
-//   .buttons__check-elem:checked+&:after {
-//     color: $orange;
-//   }
-// }

@@ -31,3 +31,21 @@
 @function rem($px) {
   @return $px / 16px+0rem;
 }
+
+@keyframes size {
+  from {
+      transform: scale(1.0);
+  }
+  to {
+      transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes size {
+  from {
+      transform: scale(1.0);
+  }
+  to {
+      transform: scale(1.2);
+  }
+}

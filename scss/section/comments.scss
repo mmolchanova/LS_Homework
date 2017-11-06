@@ -29,16 +29,14 @@
 .comments__block {
   display: none;
   position: absolute;
-  padding: 8.2vh 1.8vw;
+  padding: 7vh 1.8vw;
   color: #fff;
 
   @include tablets {
-    padding: 6.65vh 6.9vw;
     text-align: center;
   }
 
   @include phones {
-   padding-top: rem(45px);
   }
 }
 
@@ -77,7 +75,7 @@
 .block__title {
   font-family: 'Gagalin';
   font-size: rem(14px);
-  margin-bottom: rem(5px);
+  margin-bottom: 0.5vh;
 
   @include tablets {
     margin-bottom: rem(-3px);
@@ -94,13 +92,13 @@
 .block__text {
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: rem(14px);
+  font-size: 1.272727vw;
   line-height: 1.53rem;
-  margin-bottom: rem(-3px);
+  margin-bottom: -0.5vh;
 
   @include tablets {
+    font-size: rem(14px);
     line-height: 1.6rem;
-    margin-bottom: rem(9px);
   }
 
   @include phones {

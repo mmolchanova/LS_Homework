@@ -589,7 +589,8 @@ h6 {
       -ms-flex-direction: row;
       flex-direction: row;
       margin: 0 auto;
-      margin-bottom: 0.8125rem; } }
+      margin-bottom: 0.8125rem;
+      width: 100%; } }
 
 .best__desc {
   display: -webkit-box;
@@ -714,7 +715,8 @@ h6 {
   display: none;
   position: absolute;
   padding: 7vh 1.8vw;
-  color: #fff; }
+  color: #fff;
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .comments__block {
       text-align: center; } }

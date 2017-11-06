@@ -40,13 +40,37 @@
 
 .menu__item {
   height: 100%;
+  width: 100%;
+  position: relative;
+
+  &--active {
+    // .menu__item-content {
+    //   width: rem(545px);
+    //   height: 100%;
+
+    //   .item-content__text-menu {
+    //     display: block;
+    //   }
+    // }
+    .menu__item-title {
+      color: $yellow;
+    }
+  }
+}
+
+.menu__item-content {
+  float: left;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(#2f3234, .93);
 }
 
 .menu__item-link {
   display: block;
   position: relative;
   height: 100%;
-  width: 80px;
+  width: rem(80px);
   text-decoration: none;
   &:before {
     content: '';
@@ -87,25 +111,14 @@
   }
 }
 
-.menu__item-content {
-  display: none;
-}
-
-.menu__item--active {
-  .menu__item-title {
-    color: $yellow;
-  }
-
-  .menu__item-content {
-    display: block;
-    position: relative;
-    width: rem(545px)
-  }
-}
-
 .item-content__text-menu {
+  height: 100%;
+  width: 100%;
+  padding: rem(60px) rem(30px);
   color: #fff;
   font-family: 'Ubuntu';
   font-size: rem(14px);
   font-weight: 300;
+  display: none;
+  line-height: 1.8;
 }

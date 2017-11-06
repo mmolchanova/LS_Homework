@@ -150,8 +150,7 @@ h6 {
   font-family: 'Gagalin';
   font-size: 4.5rem;
   font-weight: 400;
-  margin-bottom: 3.75rem;
-  white-space: pre-wrap; }
+  margin-bottom: 3.75rem; }
   @media screen and (max-width: 768px) {
     .section__title {
       text-align: center; } }
@@ -478,10 +477,12 @@ h6 {
       align-items: center;
       text-align: center; } }
 
-@media screen and (max-width: 480px) {
-  .section__title--general {
-    text-align: center;
-    font-size: 13.125vw; } }
+.section__title--general {
+  white-space: wrap; }
+  @media screen and (max-width: 480px) {
+    .section__title--general {
+      text-align: center;
+      font-size: 13.125vw; } }
 
 .general__slogan-text {
   color: #fff;
@@ -489,7 +490,9 @@ h6 {
   font-weight: 500;
   font-size: 4.0625rem;
   line-height: 0.95;
-  margin-top: -3.125rem; }
+  margin-top: -3.125rem;
+  white-space: wrap;
+  width: 100%; }
   @media screen and (max-width: 480px) {
     .general__slogan-text {
       font-size: 11.25vw; } }
@@ -515,7 +518,8 @@ h6 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 16vh; }
+  padding-bottom: 16vh;
+  width: 100%; }
   @media screen and (max-width: 480px) {
     .best__content {
       min-width: 18.75rem;
@@ -561,6 +565,7 @@ h6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  width: 33.3%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -595,7 +600,8 @@ h6 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%; }
   @media screen and (max-width: 480px) {
     .best__desc {
       margin-left: 0.625rem;
@@ -1092,13 +1098,24 @@ h6 {
   align-items: center; }
 
 .menu__item {
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  position: relative; }
+  .menu__item--active .menu__item-title {
+    color: #f8b43a; }
+
+.menu__item-content {
+  float: left;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(47, 50, 52, 0.93); }
 
 .menu__item-link {
   display: block;
   position: relative;
   height: 100%;
-  width: 80px;
+  width: 5rem;
   text-decoration: none; }
   .menu__item-link:before {
     content: '';
@@ -1140,22 +1157,16 @@ h6 {
       transform-origin: 0 0;
       top: 96%; } }
 
-.menu__item-content {
-  display: none; }
-
-.menu__item--active .menu__item-title {
-  color: #f8b43a; }
-
-.menu__item--active .menu__item-content {
-  display: block;
-  position: relative;
-  width: 34.0625rem; }
-
 .item-content__text-menu {
+  height: 100%;
+  width: 100%;
+  padding: 3.75rem 1.875rem;
   color: #fff;
   font-family: 'Ubuntu';
   font-size: 0.875rem;
-  font-weight: 300; }
+  font-weight: 300;
+  display: none;
+  line-height: 1.8; }
 
 .order {
   background-image: url("../img/bg/form-bg.jpg");
@@ -1346,7 +1357,7 @@ h6 {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0 0 0 0.125rem;
+  padding: 0 0 0.125rem 0.125rem;
   margin-right: 0.625rem; }
 
 .buttons__check-elem:focus + .buttons__check-label:before {

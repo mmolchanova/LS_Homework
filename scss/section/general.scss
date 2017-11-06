@@ -176,7 +176,7 @@
 }
 
 .section__title--general {
-
+  white-space: wrap;
 
   @include phones {
     text-align: center;
@@ -191,6 +191,8 @@
   font-size: rem(65px);
   line-height: 0.95;
   margin-top: rem(-50px);
+  white-space: wrap;
+  width: 100%;
 
   @include phones {
     font-size: 11.25vw;

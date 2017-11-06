@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 16vh;
+  width: 100%;
 
   @include phones {
     min-width: rem(300px);
@@ -38,6 +39,7 @@
 .best__item {
   display: flex;
   flex: 1;
+  width: 33.3%;
   flex-direction: column;
   align-items: center;
   margin-right: rem(20px);
@@ -60,6 +62,7 @@
 .best__desc {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   @include phones {
     margin-left: rem(10px);

@@ -1,0 +1,91 @@
+.map {
+  background-image: url('../img/bg/map-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.map__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer {
+  height: rem(58px);
+  width: 100%;
+  background-color: #111111;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  color: #fff;
+  white-space: nowrap;
+
+  @include phones {
+    height: rem(115px);
+  }
+}
+
+.footer__container {
+  flex-direction: row;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 50%;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    flex-basis: initial;
+    flex-grow: initial;
+  }
+}
+
+.footer__phone {
+  display: flex;
+}
+
+.phone__pic {
+  fill: $orange;
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.phone__text {
+  font-weight: 900;
+  color: $orange;
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socials__img {
+  fill: #585858;
+  max-width: rem(20px);
+  max-height: rem(20px);
+
+  &:hover {
+    fill: #fff;
+  }
+}

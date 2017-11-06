@@ -1,0 +1,268 @@
+.order {
+  background-image: url('../img/bg/form-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.order__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+}
+
+.section__title--order {
+  color: $yellow;
+  margin-bottom: rem(6px);
+}
+
+.form__elem {
+  display: flex;
+  width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.form__col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.form__row {
+  width: 100%;
+  display: flex;
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: rem(20px);
+
+  @include tablets {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.form__block-textarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons__row {
+  width: 100%;
+  display: flex;
+}
+
+.form__label {
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  color: #fff
+}
+
+.form__input {
+  height: rem(35px);
+  width: 100%;
+  border: rem(1px) solid $dark;
+  border-radius: rem(5px);
+
+  &:focus {
+    outline: none;
+    border-color: $orange;
+  }
+}
+
+.form__textarea {
+  height: rem(110px);
+  resize: none;
+}
+
+.buttons__radio-label {
+  position: relative;
+
+  &:before {
+    content: "";
+    width: rem(18px);
+    height: rem(18px);
+    border-radius: 50%;
+    border: rem(1px) solid $dark;
+    background-color: #fff;
+    display: inline-flex;
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: rem(9px);
+    top: rem(0px);
+    transform: translate(-50%, 50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: $orange;
+  }
+
+  .buttons__radio-elem:focus+&:before {
+    border: rem(1px) solid $orange;
+  }
+
+  .buttons__radio-elem:focus+&:after, .buttons__radio-elem:checked+&:after {
+    width: rem(7px);
+    height: rem(7px);
+  }
+}
+
+.buttons__check-label {
+  &:before {
+    content: "\2714";
+    color: transparent;
+    font-weight: 900;
+    width: rem(18px);
+    height: rem(18px);
+    border: rem(1px) solid $dark;
+    background-color: #fff;
+    display: inline-flex;
+    position: relative;
+    padding: 0 0 rem(3px) rem(2px);
+  }
+
+  .buttons__check-elem:focus+&:before {
+    border: rem(1px) solid $orange;
+  }
+
+  .buttons__check-elem:checked+&:before {
+    content: "\2714";
+    color: $orange;
+  }
+}
+
+.buttons__btn-elem {
+  float: left;
+  @include btn($orange);
+  outline: none;
+  border: rem(1px) dotted transparent;
+
+  &:focus {
+    border: rem(1px) dotted #fff;
+  }
+}
+
+
+.buttons__btn-elem-reset {
+  outline: none;
+  display: block;
+  border: rem(1px) dotted transparent;
+  height: rem(35px);
+  min-width: rem(98px);
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Ubuntu';
+  border-radius: rem(5px);
+  font-size: rem(13px);
+  font-weight: 500;
+  border-radius: rem(5px);
+  text-align: center;
+  line-height: rem(33px);
+  transition: .5s;
+
+  &:hover {
+    cursor: pointer;
+    border: rem(1px) dotted #fff;
+  }
+
+  &:focus {
+    border: rem(1px) solid #fff;
+  }
+
+  &:active {
+    border: rem(1px) solid #fff;
+  }
+}
+
+
+
+
+
+
+
+// .buttons__radio-label {
+//   &:before {
+//     content: "";
+//     width: rem(18px);
+//     height: rem(18px);
+//     border-radius: 50%;
+//     border: rem(1px) solid $dark;
+//     background-color: #fff;
+//     display: inline-flex;
+//     position: relative;
+//   }
+
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 0;
+//     height: 0;
+//     border-radius: 50%;
+//     background: $orange;
+//   }
+
+//   .buttons__radio-elem:focus+&:before {
+//     border: rem(1px) solid $orange;
+//   }
+
+//   .buttons__radio-elem:focus+&:after, .buttons__radio-elem:checked+&:after {
+//     width: rem(7px);
+//     height: rem(7px);
+//   }
+// }
+
+// .buttons__check-label {
+//   &:before {
+//     content: "";
+//     width: rem(18px);
+//     height: rem(18px);
+//     border: rem(1px) solid $dark;
+//     background-color: #fff;
+//     display: inline-flex;
+//     position: relative;
+//   }
+
+//   &:after {
+//     content: "\2714";
+//     color: transparent;
+//     position: absolute;
+//     font-weight: 900;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+
+//   .buttons__check-elem:focus+&:before {
+//     border: rem(1px) solid $orange;
+//   }
+
+//   .buttons__check-elem:checked+&:after {
+//     color: $orange;
+//   }
+// }

@@ -57,16 +57,16 @@
 body, html {
   height: 100%; }
 
-html {
-  font-size: 16px; }
-  @media screen and (max-width: 768px) {
-    html {
-      font-size: 15px; } }
-  @media screen and (max-width: 480px) {
-    html {
-      font-size: 14px; } }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9375rem; } }
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.8125rem; } }
 
 body {
+  font-size: 1rem;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   color: #2f3234;
   line-height: 1.42;
@@ -364,10 +364,10 @@ h6 {
 .burger-btn__line {
   background-color: #fff;
   display: block;
-  width: 25px;
-  height: 4px;
-  border-radius: 2px;
-  margin-bottom: 5px; }
+  width: 1.5625rem;
+  height: 0.25rem;
+  border-radius: 0.125rem;
+  margin-bottom: 0.3125rem; }
 
 .general__content {
   width: 100%;
@@ -714,9 +714,10 @@ h6 {
 .comments__block {
   display: none;
   position: absolute;
-  padding: 7vh 1.8vw;
+  padding: 0 8% 0.5vh 8%;
   color: #fff;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   @media screen and (max-width: 768px) {
     .comments__block {
       text-align: center; } }
@@ -749,6 +750,14 @@ h6 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     position: absolute; }
     @media screen and (max-width: 768px) {
       .comments__img:hover .comments__block {
@@ -758,9 +767,13 @@ h6 {
         align-items: center; } }
 
 .block__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: 'Gagalin';
   font-size: 0.875rem;
-  margin-bottom: 0.5vh; }
+  margin-bottom: 1vmin; }
   @media screen and (max-width: 768px) {
     .block__title {
       margin-bottom: -0.1875rem; } }
@@ -772,11 +785,15 @@ h6 {
       margin-bottom: 1.75rem; } }
 
 .block__text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: 1.272727vw;
+  font-size: 0.875rem;
   line-height: 1.53rem;
-  margin-bottom: -0.5vh; }
+  margin-bottom: -0.5vmin; }
   @media screen and (max-width: 768px) {
     .block__text {
       font-size: 0.875rem;
@@ -786,6 +803,10 @@ h6 {
       display: none; } }
 
 .block__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   display: block;
   border: none;
   height: 2.1875rem;
@@ -1102,12 +1123,20 @@ h6 {
 .menu__item {
   height: 100%;
   width: 100%;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .menu__item--active .menu__item-content {
+    width: 34.0625rem;
+    height: 100%; }
+    .menu__item--active .menu__item-content .item-content__text-menu {
+      display: block; }
   .menu__item--active .menu__item-title {
     color: #f8b43a; }
 
 .menu__item-content {
-  float: left;
   width: 0;
   height: 100%;
   overflow: hidden;

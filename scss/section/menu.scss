@@ -42,16 +42,17 @@
   height: 100%;
   width: 100%;
   position: relative;
+  display: flex;
 
   &--active {
-    // .menu__item-content {
-    //   width: rem(545px);
-    //   height: 100%;
+    .menu__item-content {
+      width: rem(545px);
+      height: 100%;
 
-    //   .item-content__text-menu {
-    //     display: block;
-    //   }
-    // }
+      .item-content__text-menu {
+        display: block;
+      }
+    }
     .menu__item-title {
       color: $yellow;
     }
@@ -59,7 +60,6 @@
 }
 
 .menu__item-content {
-  float: left;
   width: 0;
   height: 100%;
   overflow: hidden;
@@ -121,4 +121,5 @@
   font-weight: 300;
   display: none;
   line-height: 1.8;
+
 }

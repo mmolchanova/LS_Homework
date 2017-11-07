@@ -104,10 +104,10 @@
 .burger-btn__line {
   background-color: #fff;
   display: block;
-  width: 25px;
-  height: 4px;
-  border-radius: 2px;
-  margin-bottom: 5px;
+  width: rem(25px);
+  height: rem(4px);
+  border-radius: rem(2px);
+  margin-bottom: rem(5px);
 }
 
 .general__content {

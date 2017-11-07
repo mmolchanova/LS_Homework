@@ -554,7 +554,8 @@ h6 {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      margin-top: 1.875rem; } }
+      margin-top: 1.875rem;
+      height: 70vh; } }
 
 .best__item {
   display: -webkit-box;
@@ -590,7 +591,12 @@ h6 {
       flex-direction: row;
       margin: 0 auto;
       margin-bottom: 0.8125rem;
-      width: 100%; } }
+      width: 100%;
+      height: 33%;
+      -webkit-box-flex: 3;
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      flex: 3; } }
 
 .best__desc {
   display: -webkit-box;
@@ -606,11 +612,8 @@ h6 {
   @media screen and (max-width: 480px) {
     .best__desc {
       margin-left: 0.625rem;
-      -webkit-box-flex: 3;
-      -webkit-flex: 3;
-      -ms-flex: 3;
-      flex: 3;
-      max-width: 70vw; } }
+      max-width: 70vw;
+      height: 100%; } }
 
 .best__desc-title {
   font-size: 1.5rem;
@@ -793,7 +796,8 @@ h6 {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.53rem;
-  margin-bottom: -0.5vmin; }
+  margin-bottom: -0.5vmin;
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .block__text {
       font-size: 0.875rem;
@@ -1122,7 +1126,6 @@ h6 {
 
 .menu__item {
   height: 100%;
-  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;

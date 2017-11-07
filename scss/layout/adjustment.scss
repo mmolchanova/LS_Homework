@@ -40,7 +40,7 @@
 
 .section__title {
   font-family: 'Gagalin';
-  font-size: rem(72px);
+  font-size: 72px;
   font-weight: 400;
   margin-bottom: rem(60px);
 
@@ -49,7 +49,7 @@
   }
 
   @include phones {
-    font-size: rem(55px);
+    font-size: 63px;
   }
 
   &--white {
@@ -96,6 +96,18 @@
 
 .arrow__link {
   display: block;
+  position: absolute;
+  bottom: 4vh;
+
+
+  @include tablets {
+    bottom: 2.7vh;
+    left: 50%;
+  }
+
+  @include phones {
+    bottom: 2.5vh;
+  }
 
   &:hover {
     animation: size 1s;
@@ -110,12 +122,8 @@
 }
 
 .arrow__img {
-  width: rem(30px);
-  height: rem(30px);
+  width: rem(29px);
+  height: rem(29px);
   fill: #fff;
-  margin-bottom: 4vh;
 
-  @include phones {
-   margin-bottom: 3.5vh;
-  }
 }

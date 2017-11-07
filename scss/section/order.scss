@@ -145,15 +145,15 @@
     content: "";
     position: absolute;
     left: rem(8px);
-    top: rem(-1px);
-    transform: translate(-50%, 50%);
+    top: rem(6px);
+    transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     border-radius: 50%;
     background: $orange;
 
     @include tablets {
-      top: rem(0.5px);
+      top: rem(7px);
     }
   }
 
@@ -178,7 +178,8 @@
     background-color: #fff;
     display: inline-flex;
     position: relative;
-    padding: 0 0 rem(2px) rem(2px);
+    line-height: 1.25;
+    padding-left: rem(2px);
     margin-right: rem(10px);
   }
 

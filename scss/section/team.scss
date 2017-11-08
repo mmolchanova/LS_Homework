@@ -20,40 +20,43 @@
   top: 0;
   display: flex;
   width: 49.3%;
-  min-width: rem(480px);
+  min-width: 480px;
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: rgba(#2f3234, .93);
-  padding-left: rem(80px);
-  padding-top: rem(64px);
+  padding-left: 80px;
+  padding-top: 64px;
 
   @include tablets {
     width: 100%;
     align-items: center;
     padding: 0;
-    padding-top: rem(110px);
+    padding-top: 9.5vh;
   }
 
   @include phones {
-    padding-top: rem(48px);
-    min-width: rem(300px);
+    padding-top: 6.4vh;
+    min-width: 300px;
     max-width: 100vw;
   }
 }
 
 .team__list {
   margin-top: -0.5vh;
-  margin-left: rem(18px);
+  margin-left: 18px;
 
 
   @include tablets {
+    margin: 0;
+    margin-top: 4.3vh;
+    margin-left: 2.5%;
     text-align: center;
   }
 
   @include phones {
-    margin-top: rem(80px);
+    margin-top: 2vh;
 
   }
 }
@@ -63,7 +66,7 @@
   text-decoration: none;
   color: #fff;
   font-family: 'Gagalin';
-  font-size: rem(14px);
+  font-size: 14px;
   position: relative;
   margin-bottom: 4.5vh;
 
@@ -77,33 +80,44 @@
     border-left: 5px solid transparent;
     border-top: 6px solid $yellow;
     border-bottom: 0 solid transparent;
-    left: rem(-18px);
-    top: rem(8px);
+    left: -18px;
+    top: 8px;
     transform: rotate(0deg);
   }
 
   @include tablets {
-    font-size: rem(25px);
-    margin-bottom: rem(28px);
+    font-size: 25px;
+    margin-bottom: 2.2vh;
 
     &:before {
-      top: rem(16px);
+      top: 16px;
     }
   }
 
   @include phones {
-    margin-bottom: rem(32px);
+    font-size: 24px;
+    margin-bottom: 3.3vh;
 
     &:before {
-    left: rem(-31px);
+    left: -16px;
     }
   }
 }
 
 .team__item-content {
   display: none;
-  margin-top: -2.5vh;
-  margin-bottom: 3.5vh;
+  margin-top: -2.2vh;
+  margin-bottom: 4vh;
+
+  @include tablets {
+    margin-top: -1vh;
+    margin-bottom: 1.5vh;
+  }
+
+  @include phones {
+    margin-top: -2vh;
+    margin-bottom: 2.2vh;
+  }
 }
 
 .team__item--active {
@@ -117,7 +131,7 @@
 
     @include tablets {
       &:before {
-        top: rem(12px);
+        top: 12px;
       }
     }
   }
@@ -133,40 +147,40 @@
 }
 
 .item-content__img {
-  width: rem(100px);
-  height: rem(100px);
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: rem(20px);
+  margin-right: 20px;
 
   @include tablets {
-    min-width: rem(105px);
-    min-height: rem(105px);
-    margin-bottom: rem(20px);
+    margin-bottom: 2vh;
   }
 
   @include phones {
-    min-width: rem(112px);
-    min-height: rem(112px);
-    margin-bottom: rem(18px);
+    margin-bottom: 2.1vh;
   }
+
 }
 
 .item-content__desc {
-  width: rem(220px);
+  width: 230px;
+  max-width: 60%;
   color: #fff;
   font-family: 'Ubuntu';
-  font-size: rem(14px);
+  font-size: 14px;
   font-weight: 300;
+  margin-top: -0.3vh;
 
   @include tablets {
-    width: rem(340px);
-    margin-bottom: rem(-5px);
+    width: 75%;
+    max-width: 90%;
+    margin: -0.5vh 4% -0.2vh 0;
   }
 
   @include phones {
-    width: rem(340px);
-    margin-bottom: rem(5px);
+    margin-top: 0;
+    margin-bottom: -0.7vh;
   }
 }
 
@@ -175,9 +189,5 @@
 }
 
 .item-content__text {
-  line-height: 1.5rem;
-
-  @include tablets {
-    line-height: 1.6rem;
-  }
+  line-height: 1.7;
 }

@@ -45,7 +45,8 @@
 
   &--active {
     .menu__item-content {
-      width: rem(545px);
+      width: 545px;
+      max-width: 60vw; 
       height: 100%;
 
       .item-content__text-menu {
@@ -69,7 +70,8 @@
   display: block;
   position: relative;
   height: 100%;
-  width: rem(80px);
+  max-width: 80px;
+  width: 12vw;
   text-decoration: none;
   &:before {
     content: '';
@@ -113,12 +115,16 @@
 .item-content__text-menu {
   height: 100%;
   width: 100%;
-  padding: rem(60px) rem(30px);
+  padding: 11% 5.5%;
   color: #fff;
   font-family: 'Ubuntu';
-  font-size: rem(14px);
+  font-size: 14px;
   font-weight: 300;
   display: none;
   line-height: 1.8;
+
+  @include phones {
+    font-size: 2.9vw;
+  }
 
 }

@@ -49,7 +49,7 @@
   }
 
   @include phones {
-    font-size: 63px;
+    font-size: 50px;
   }
 
   &--white {
@@ -97,16 +97,16 @@
 .arrow__link {
   display: block;
   position: absolute;
-  bottom: 4vh;
-
+  bottom: 4.5vh;
 
   @include tablets {
     bottom: 2.7vh;
-    left: 50%;
+    left: 48%;
   }
 
   @include phones {
-    bottom: 2.5vh;
+    bottom: 2.2vh;
+    left: 47%;
   }
 
   &:hover {
@@ -122,8 +122,7 @@
 }
 
 .arrow__img {
-  width: rem(29px);
-  height: rem(29px);
+  width: 29px;
+  height: 29px;
   fill: #fff;
-
 }

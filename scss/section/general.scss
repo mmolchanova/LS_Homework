@@ -20,26 +20,26 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: rem(5px);
+  margin-top: 5px;
 }
 
 .header__logo {
   margin-right: auto;
-  margin-left: rem(-2px);
-  margin-top: rem(6.5px);
+  margin-left: -2px;
+  margin-top: 6.5px;
 
   @include tablets {
     margin-left: 2%;
   }
 
   @include phones {
-    margin-left: 2.5%;
-    margin-top: rem(8.5px);
+    margin-left: 2%;
+    margin-top: 8.5px;
   }
 }
 
 .header__nav {
-  margin-right: rem(13px);
+  margin-right: 13px;
 
   @include tablets {
     display: none;
@@ -53,8 +53,8 @@
     content: '';
     display: inline-block;
     vertical-align: middle;
-    @include circle(rem(4px), #fff);
-    margin: 0 rem(14px) 0 rem(15px);
+    @include circle(4px, #fff);
+    margin: 0 14px 0 15px;
   }
   &:last-child:after {
     display: none;
@@ -64,7 +64,7 @@
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: rem(13px);
+  font-size: 13px;
   font-weight: 500;
   line-height: 5;
   text-transform: uppercase;
@@ -79,12 +79,7 @@
   @include btn($orange);
 
   @include tablets {
-    padding: 0 rem(18px);
-  }
-
-  @include phones {
-    padding: 0 rem(21px);
-    height: rem(42px);
+    padding: 0 17px;
   }
 }
 
@@ -92,7 +87,7 @@
   display: none;
   border: none;
   background-color: transparent;
-  margin: rem(6px) -1% 0 3.5%;
+  margin: 6px 1.5% 0 3%;
 
   @include tablets {
     display: flex;
@@ -100,7 +95,7 @@
   }
 
   @include phones {
-    margin: rem(9px) -3% 0 6%;
+    margin: 6px 0.7% 0 5%;
   }
 
   &:hover .burger-btn__line {
@@ -113,40 +108,33 @@
 .burger-btn__line {
   background-color: #fff;
   display: block;
-  width: rem(25px);
-  height: rem(4px);
-  border-radius: rem(2px);
-  margin-bottom: rem(5px);
-
-  @include phones {
-    height: rem(5px);
-    margin-bottom: rem(6px);
-  }
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .general__content {
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-  margin-top: -6vh;
+  margin-top: -16vh;
   margin-left: 2.5%;
 
   @include tablets {
     flex-direction: column;
     align-items: center;
-    margin-top: -15vh;
-    margin-left: 3%;
+    margin-top: -14.5vh;
   }
 
   @include phones {
     flex-direction: column;
-    margin-top: -11vh;
+    margin-top: -12vh;
     max-width: 100%;
-    margin-left: 5%;
   }
 }
 
@@ -161,16 +149,16 @@
 
 .general__img-pic {
   max-width: 100%;
-  max-height: 80vh;
-  margin-top: -10vh;
+  margin-top: -11vh;
 
   @include tablets {
     margin: 0 auto;
   }
 
   @include phones {
-    width: 84%;
-    max-width: 90vw;
+    width: 360px;
+    margin-top: 1vh;
+    margin-left: -1%;
   }
 }
 
@@ -179,15 +167,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: rem(-5px);
+  margin-left: -5px;
   max-width: 100%;
 
 
   @include tablets {
-    width: rem(420px);
+    width: 420px;
     align-items: center;
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 1.9vh;
   }
 
   @include phones {
@@ -208,15 +196,19 @@
   color: #fff;
   font-family: 'Lifehack';
   font-weight: 500;
-  font-size: rem(65px);
+  font-size: 65px;
   line-height: 0.95;
-  margin-top: rem(-50px);
+  margin-top: -8.2vh;
   white-space: wrap;
   width: 100%;
 
+  @include tablets {
+    margin-top: -5vh;
+  }
+
   @include phones {
-    margin-top: -7vh;
+    margin-top: -9vh;
     font-size: 11.25vw;
-    line-height: 1.05;
+    line-height: 1.1;
   }
 }

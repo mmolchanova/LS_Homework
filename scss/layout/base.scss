@@ -6,16 +6,6 @@ body, html {
   height: 100%;
 }
 
-html {
-  @include tablets {
-    font-size: rem(15px);
-  }
-
-  @include phones {
-    font-size: rem(13px);
-  }
-}
-
 body {
   font-size: rem(16px);
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;

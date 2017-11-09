@@ -152,7 +152,8 @@
   margin-top: -11vh;
 
   @include tablets {
-    margin: 0 auto;
+    margin-top: 0;
+    margin-left: -2%;
   }
 
   @include phones {

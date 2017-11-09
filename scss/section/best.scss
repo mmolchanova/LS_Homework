@@ -9,43 +9,43 @@
 .best__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 17.5vh;
+  padding-bottom: 16vh;
   width: 100%;
-  height: 100%;
 
   @include tablets {
-    padding-bottom: 25vh;
+    padding-bottom: 26.5vh;
   }
 
   @include phones {
-    min-width: rem(300px);
-    max-width: 100vw;
-  }
-}
-
-.section__title--best {
-  @include tablets {
-    margin-left: 3%;
+    height: 100vh;
+    min-height: 800px;
+    min-width: 300px;
+    width: 100%;
+    padding-bottom: 33.5vh;
   }
 }
 
 .best__list {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 
   @include tablets {
-    margin-top: 7.5vh;
-    margin-left: 2%;
+    margin-top: 8.5vh;
+    width: 98%;
   }
 
   @include phones {
     display: flex;
     flex-direction: column;
-    margin-top: rem(30px);
-    height: 80%;
+    justify-content: flex-start;
+    margin-left: 5.5%;
+    margin-top: -0.5vh;
+    height: 60%;
+    max-height: 60%;
   }
 }
 
@@ -54,57 +54,53 @@
   flex: 1;
   width: 33.3%;
   flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
   align-items: center;
-  margin-right: rem(20px);
+  margin-right: 2.1%;
 
   &:last-child {
     margin-right: 0;
   }
 
-  @include tablets {
-    margin-right: 3%;
-  }
-
   @include phones {
     flex-direction: row;
-    margin: 0 auto;
-    margin-bottom: rem(13px);
+    justify-content: flex-start;
+    margin-right: 0;
     width: 100%;
-    height: 33%;
+    height: 33.3%;
+    min-height: 33.3%;
     flex: 3;
+    margin-bottom: 8.5vh;
+  }
 
+  &--natural {
+    margin-top: -2.5vh;
   }
 }
 
 .best__desc {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
 
   @include phones {
-    margin-left: rem(10px);
-    max-width: 70vw;
-    height: 100%;
-
+    margin-left: 6%;
+    width: 80%;
+    min-height: 100%;
   }
 }
 
 .best__desc-title {
   font-size: 24px;
   font-family: 'Lifehack';
-  margin-top: rem(28px);
-  margin-bottom: rem(1px);
   text-align: center;
-  line-height: 1.85;
-
-  @include tablets {
-    line-height: 1.2;
-    margin-bottom: rem(3px);
-  }
+  line-height: 1.2;
+  margin-top: 34px;
 
   @include phones {
     text-align: left;
-    margin-bottom: rem(6px);
   }
 }
 
@@ -114,61 +110,60 @@
   font-weight: 300;
   text-align: center;
   width: 100%;
-  line-height: 1.5;
-
-  @include tablets {
-    line-height: 1.75;
-  }
+  line-height: 1.75;
 
   @include phones {
     text-align: left;
-    line-height: 1.7rem;
+    line-height: 1.8;
   }
 }
 
 .best__img {
-  width: rem(95px);
-  height: rem(90px);
+  width: 95px;
+
+  &--meat {
+    margin: 0 2px -2px 0;
+    height: 90px;
+  }
+
+  &--hand {
+    margin: 0 0 2px 0;
+    height: 86px;
+      @include phones {
+      margin: -4.5vh 0 0 0;
+    }
+  }
+
+  &--natural {
+  height: 76px;
+  margin: 4px -2px 6px 0;
+
+      @include phones {
+      margin: -4.5vh 0 0 0;
+    }
+  }
 }
 
 .best__pic {
   width: 100%;
   height: 100%;
 
+
   &--meat {
     fill: $orange;
-    // margin: rem(-22px) rem(2px) 0 0;
   }
+
   &--hand {
     fill: $yellow;
-    // margin: 0 0 rem(4px) 0;
+
   }
+
   &--natural {
     fill: $green;
-    // width: rem(90px);
-    // height: rem(85px);
-    // margin: rem(-20px) 0 rem(10px) 0;
   }
 
-  // @include tablets {
-  //   width: rem(100px);
-  //   height: rem(100px);
-  // }
-
-  // @include phones {
-  //   max-width: 41.67vw;
-  //   max-height: 39.58vw;
-  //   margin: 0;
-  //   flex: 1;
-
-  //   &--hand {
-  //     margin: 7.3vw 0 0 0;
-  //   }
-
-  //   &--natural {
-  //     max-width: 20.84vw;
-  //     max-height: 20.84vw;
-  //     margin: -10vw 2.08vw 0 2.08vw;
-  //   }
-  // }
+  @include phones {
+    min-width: 19vw;
+  }
 }
+

@@ -36,9 +36,11 @@
 
   @include tablets {
     text-align: center;
+    padding: 1vh 13% 0 13%;
   }
 
   @include phones {
+    padding: 0 13% 1vh 13%;
   }
 }
 
@@ -79,18 +81,18 @@
 .block__title {
   display: flex;
   font-family: 'Gagalin';
-  font-size: rem(14px);
+  font-size: 14px;
   margin-bottom: 1vmin;
 
   @include tablets {
-    margin-bottom: rem(-3px);
+    margin-bottom: -0.5vh;
   }
 
   @include phones {
-    font-size: rem(27px);
-    line-height: 2rem;
+    font-size: 24px;
+    line-height: 1.2;
     text-align: center;
-    margin-bottom: rem(28px);
+    margin-bottom: 3vh;
   }
 }
 
@@ -98,14 +100,15 @@
   display: flex;
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: rem(14px);
-  line-height: 1.53rem;
+  font-size: 14px;
+  line-height: 1.53;
   margin-bottom: -0.5vmin;
   width: 100%;
 
   @include tablets {
-    font-size: rem(14px);
-    line-height: 1.6rem;
+    line-height: 1.75;
+    margin-bottom: 0.5vh;
+    min-width: 230px;
   }
 
   @include phones {
@@ -116,11 +119,10 @@
 .block__btn {
   display: flex;
   @include btn($dark);
-  width: rem(110px);
+  width: 110px;
 
   @include tablets {
-    width: rem(117px);
-    margin-left: rem(5px);
+    margin-left: 1%;
   }
 
   @include phones {
@@ -134,8 +136,6 @@
   @include phones {
     @include btn($dark);
     display: block;
-    width: rem(145px);
-    height: rem(41px);
-    margin-left: rem(3px);
+    width: 130px;
   }
 }

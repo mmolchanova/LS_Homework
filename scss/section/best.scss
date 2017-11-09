@@ -126,45 +126,49 @@
   }
 }
 
-
-
 .best__img {
   width: rem(95px);
   height: rem(90px);
+}
+
+.best__pic {
+  width: 100%;
+  height: 100%;
+
   &--meat {
     fill: $orange;
-    margin: rem(-22px) rem(2px) 0 0;
+    // margin: rem(-22px) rem(2px) 0 0;
   }
   &--hand {
     fill: $yellow;
-    margin: 0 0 rem(4px) 0;
+    // margin: 0 0 rem(4px) 0;
   }
   &--natural {
     fill: $green;
-    width: rem(90px);
-    height: rem(85px);
-    margin: rem(-20px) 0 rem(10px) 0;
+    // width: rem(90px);
+    // height: rem(85px);
+    // margin: rem(-20px) 0 rem(10px) 0;
   }
 
-  @include tablets {
-    width: rem(100px);
-    height: rem(100px);
-  }
+  // @include tablets {
+  //   width: rem(100px);
+  //   height: rem(100px);
+  // }
 
-  @include phones {
-    max-width: 41.67vw;
-    max-height: 39.58vw;
-    margin: 0;
-    flex: 1;
+  // @include phones {
+  //   max-width: 41.67vw;
+  //   max-height: 39.58vw;
+  //   margin: 0;
+  //   flex: 1;
 
-    &--hand {
-      margin: 7.3vw 0 0 0;
-    }
+  //   &--hand {
+  //     margin: 7.3vw 0 0 0;
+  //   }
 
-    &--natural {
-      max-width: 20.84vw;
-      max-height: 20.84vw;
-      margin: -10vw 2.08vw 0 2.08vw;
-    }
-  }
+  //   &--natural {
+  //     max-width: 20.84vw;
+  //     max-height: 20.84vw;
+  //     margin: -10vw 2.08vw 0 2.08vw;
+  //   }
+  // }
 }

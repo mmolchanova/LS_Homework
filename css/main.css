@@ -714,7 +714,6 @@ h6 {
 
 .best__img {
   width: 95px;
-  min-width: 95px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

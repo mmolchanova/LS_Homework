@@ -6,19 +6,39 @@
   position: relative;
 }
 
+.section__title--order {
+  @include phones {
+    line-height: 1.2;
+    margin-bottom: 3vh;
+  }
+}
+
 .order__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: rem(76px);
+  padding-bottom: 11.7vh;
+
+  @include tablets {
+    padding-bottom: 13.5vh;
+  }
+
+  @include phones {
+    padding-bottom: 0;
+    padding-top: 3vh;
+  }
 }
 
 .form {
   width: 100%;
 
   @include tablets {
-    max-width: rem(505px);
+    max-width: 475px;
+  }
+
+  @include phones {
+    max-width: 460px;
   }
 }
 
@@ -35,7 +55,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-right: rem(15px);
+  margin-right: 15px;
 
   &:last-child {
       margin: 0;
@@ -56,17 +76,18 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: rem(17px);
+  margin-right: 17px;
 
   &:last-child {
       margin-right: 0;
     }
 
-  // @include tablets {
-  //   margin-right: rem(24px);
-  // }
+  @include tablets {
+    margin-right: 20px;
+  }
 
   @include phones {
+    margin-right: 10px;
     &:nth-child(3) {
       margin-right: 0;
     }
@@ -85,85 +106,102 @@
   flex-direction: column;
 }
 
-.buttons__row {
-  width: 100%;
-  display: flex;
-}
-
 .form__label {
-  font-size: rem(14px);
+  font-size: 14px;
   font-family: 'Ubuntu';
   font-weight: 300;
   color: #fff;
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
+
+  @include tablets {
+    margin-bottom: 3px;
+  }
 }
 
 .form__input {
-  height: rem(36px);
+  height: 36px;
   width: 100%;
-  border: rem(1px) solid $dark;
-  border-radius: rem(5px);
-  margin-bottom: rem(15px);
-  padding: 0 rem(10px);
+  border: 1px solid $dark;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 0 10px;
 
   &:focus {
     outline: none;
-    border: rem(2px) solid $yellow;
+    border: 2px solid $yellow;
   }
 
-  // @include tablets {
-  //   margin-bottom: rem(17px);
-  // }
+  @include tablets {
+    margin-bottom: 17px;
+  }
 }
 
 .form__textarea {
-  height: rem(110px);
+  height: 110px;
   resize: none;
 }
 
 .buttons__row {
-  margin-bottom: rem(18px);
+  width: 100%;
+  display: flex;
+  margin-bottom: 18px;
+
+  @include phones{
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
+}
+
+.buttons__row--radio {
+  @include phones {
+    margin-left: 9px;
+  }
 }
 
 .buttons__radio-label {
   position: relative;
-  margin-right: rem(18px);
+  margin-right: 18px;
 
   &:before {
     content: "";
-    width: rem(17px);
-    height: rem(17px);
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
-    border: rem(1px) solid $dark;
+    border: 1px solid $dark;
     background-color: #fff;
     display: inline-flex;
     position: relative;
-    margin-right: rem(10px);
+    margin-right: 10px;
+
+    @include phones {
+     margin-right: 9px;
+    }
   }
 
   &:after {
     content: "";
     position: absolute;
-    left: rem(8px);
-    top: rem(6px);
+    left: 8px;
+    top: 6px;
     transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     border-radius: 50%;
     background: $orange;
 
-    @include tablets {
-      top: rem(7px);
+    @include phones {
+      top: 5.5px;
     }
   }
 
   .buttons__radio-elem:focus+&:before {
-    border: rem(1px) solid $orange;
+    border: 1px solid $orange;
   }
 
   .buttons__radio-elem:focus+&:after, .buttons__radio-elem:checked+&:after {
-    width: rem(7px);
-    height: rem(7px);
+    width: 7px;
+    height: 7px;
   }
 }
 
@@ -172,19 +210,26 @@
     content: "\2714";
     color: transparent;
     font-weight: 900;
-    width: rem(18px);
-    height: rem(18px);
-    border: rem(1px) solid $dark;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $dark;
     background-color: #fff;
     display: inline-flex;
     position: relative;
     line-height: 1.25;
-    padding-left: rem(2px);
-    margin-right: rem(10px);
+    padding-left: 2px;
+    margin-right: 10px;
+
+    @include phones {
+      width: 17px;
+      height: 17px;
+      margin-right: 7px;
+      margin-left: -2px;
+    }
   }
 
   .buttons__check-elem:focus+&:before {
-    border: rem(1px) solid $orange;
+    border: 1px solid $orange;
   }
 
   .buttons__check-elem:checked+&:before {
@@ -193,45 +238,56 @@
   }
 }
 
+.buttons__btn {
+  @include tablets {
+    margin-top: 20px;
+  }
+
+  @include phones {
+    margin-top: 5px;
+    margin-left: 7px;
+  }
+}
+
 .buttons__btn-elem {
   float: left;
   @include btn($orange);
   outline: none;
-  border: rem(1px) dotted transparent;
-  margin-left: rem(2px);
+  border: 1px dotted transparent;
+  margin-left: 2px;
 
   &:focus {
-    border: rem(1px) dotted #fff;
+    border: 1px dotted #fff;
   }
 }
 
 .buttons__btn-elem-reset {
   outline: none;
   display: block;
-  border: rem(1px) dotted transparent;
-  height: rem(35px);
-  min-width: rem(98px);
+  border: 1px dotted transparent;
+  height: 35px;
+  min-width: 98px;
   background-color: transparent;
   color: #fff;
   font-family: 'Ubuntu';
-  border-radius: rem(5px);
-  font-size: rem(13px);
+  border-radius: 5px;
+  font-size: 13px;
   font-weight: 500;
-  border-radius: rem(5px);
+  border-radius: 5px;
   text-align: center;
-  line-height: rem(33px);
+  line-height: 33px;
   transition: .5s;
 
   &:hover {
     cursor: pointer;
-    border: rem(1px) dotted #fff;
+    border: 1px dotted #fff;
   }
 
   &:focus {
-    border: rem(1px) solid #fff;
+    border: 1px solid #fff;
   }
 
   &:active {
-    border: rem(1px) solid #fff;
+    border: 1px solid #fff;
   }
 }

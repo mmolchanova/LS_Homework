@@ -25,6 +25,16 @@
   position: absolute;
   top: 13.5vh;
   left: 8.5%;
+
+  @include tablets {
+    top: 8.8vh;
+    left: 3%;
+  }
+
+  @include phones {
+    top: 5.5vh;
+    left: 12.5%;
+  }
 }
 
 .menu__list {
@@ -36,6 +46,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  max-width: 100%;
 }
 
 .menu__item {
@@ -44,15 +55,38 @@
   display: flex;
 
   &--active {
+
+      @include tablets {
+        width: 100%;
+      }
+
+      @include phones {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        width: 100vw;
+      }
+
     .menu__item-content {
       width: 545px;
-      max-width: 60vw; 
-      height: 100%;
+
+      @include tablets {
+        width: 100%;
+      }
+
+      @include phones {
+        width: 100%;
+        max-width: 100%;
+      }
 
       .item-content__text-menu {
         display: block;
+        height: 100%;
+        min-width: 100%;
       }
     }
+
     .menu__item-title {
       color: $yellow;
     }
@@ -60,7 +94,7 @@
 }
 
 .menu__item-content {
-  width: 0;
+  min-width: 0;
   height: 100%;
   overflow: hidden;
   background: rgba(#2f3234, .93);
@@ -70,8 +104,7 @@
   display: block;
   position: relative;
   height: 100%;
-  max-width: 80px;
-  width: 12vw;
+  width: 80px;
   text-decoration: none;
   &:before {
     content: '';
@@ -86,10 +119,6 @@
 
   &:hover:before {
     background: rgba(#141414,0.85);
-  }
-
-  @include phones {
-    max-width: 16.7vw;
   }
 }
 
@@ -110,6 +139,12 @@
     transform-origin: 0 0;
     top: 96%;
   }
+
+  @include phones {
+    transform: rotate(-90deg) translate(0, -50%);
+    transform-origin: 0 0;
+    top: 92.5%;
+  }
 }
 
 .item-content__text-menu {
@@ -122,9 +157,4 @@
   font-weight: 300;
   display: none;
   line-height: 1.8;
-
-  @include phones {
-    font-size: 2.9vw;
-  }
-
 }

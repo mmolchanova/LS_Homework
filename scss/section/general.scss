@@ -34,7 +34,7 @@
 
   @include phones {
     margin-left: 2%;
-    margin-top: 8.5px;
+    margin-top: 8px;
   }
 }
 
@@ -79,6 +79,10 @@
   @include btn($orange);
 
   @include tablets {
+    padding: 2px 17px;
+  }
+
+  @include phones {
     padding: 0 17px;
   }
 }
@@ -87,7 +91,7 @@
   display: none;
   border: none;
   background-color: transparent;
-  margin: 6px 1.5% 0 3%;
+  margin: 6px 1.5% 0 3.1%;
 
   @include tablets {
     display: flex;

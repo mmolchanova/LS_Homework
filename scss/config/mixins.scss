@@ -8,19 +8,20 @@
 @mixin btn($color) {
   display: block;
   border: none;
-  height: rem(35px);
-  min-width: rem(98px);
+  height: 35px;
+  min-width: 98px;
   background-color: $color;
   color: #fff;
   text-transform: uppercase;
   font-family: 'Ubuntu';
-  border-radius: rem(5px);
+  border-radius: 5px;
   font-size: 13px;
   font-weight: 500;
-  border-radius: rem(5px);
+  border-radius: 5px;
   text-align: center;
-  line-height: rem(35px);
+  line-height: 35px;
   transition: .5s;
+
   &:hover {
     cursor: pointer;
     background-color: darken($color, 7%);

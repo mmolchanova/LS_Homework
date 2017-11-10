@@ -13,6 +13,7 @@
   align-items: center;
   padding-bottom: 16vh;
   width: 100%;
+  max-width: 100%;
 
   @include tablets {
     padding-bottom: 26.5vh;
@@ -20,8 +21,6 @@
 
   @include phones {
     justify-content: flex-start;
-    height: 100vh;
-    min-height: 800px;
     min-width: 300px;
     width: 100%;
     padding-bottom: 10vh;
@@ -47,10 +46,9 @@
     justify-content: flex-start;
     margin-left: 5.5%;
     margin-top: -3.95vh;
-    min-height: 440px;
-    max-height: 90vh;
     flex: 0 0 auto;
     padding-right: 2%;
+    max-width: 100%;
   }
 }
 
@@ -74,6 +72,7 @@
     width: 100%;
     margin-top: -0.15vh;
     flex: 0 0 auto;
+    max-width: 100%;
 
     &--natural {
       margin-top: -1.8vh;

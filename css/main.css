@@ -590,7 +590,10 @@ h6 {
       margin-top: -4vh;
       min-height: 440px;
       max-height: 90vh;
-      height: 440px; } }
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; } }
 
 .best__item {
   display: -webkit-box;
@@ -636,7 +639,11 @@ h6 {
       max-height: 100%;
       height: 33.3%;
       min-height: 33.3%;
-      margin-top: 16px; }
+      margin-top: 16px;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; }
       .best__item--natural {
         margin-top: 32px; } }
 
@@ -662,20 +669,28 @@ h6 {
       max-height: 100%;
       height: 100%;
       min-height: 100%;
-      margin-top: 34px; } }
+      margin-top: 34px;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; } }
 
 .best__desc-title {
   font-size: 24px;
   font-family: 'Lifehack';
   text-align: center;
   line-height: 1.2;
-  margin-top: 34px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  margin-top: 34px; }
   @media screen and (max-width: 497px) {
     .best__desc-title {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
       margin-top: 0;
       text-align: left; } }
 
@@ -685,10 +700,17 @@ h6 {
   font-weight: 300;
   text-align: center;
   max-width: 100%;
-  line-height: 1.75;
-  display: block; }
+  line-height: 1.75; }
   @media screen and (max-width: 497px) {
     .best__desc-text {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
       text-align: left;
       line-height: 1.8; } }
 

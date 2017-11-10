@@ -19,11 +19,13 @@
   }
 
   @include phones {
+    justify-content: flex-start;
     height: 100vh;
     min-height: 800px;
     min-width: 300px;
     width: 100%;
-    padding-bottom: 33.5vh;
+    padding-bottom: 0;
+    padding-top: 5.5vh;
   }
 }
 
@@ -43,10 +45,11 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-left: 5.5%;
-    margin-top: -0.5vh;
-    height: 60%;
-    max-height: 80%;
-  }
+    margin-top: -4vh;
+    min-height: 440px;
+    max-height: 90vh;
+    height: 440px;
+    }
 }
 
 .best__item {
@@ -67,14 +70,14 @@
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
+    max-height: 100%;
     height: 33.3%;
     min-height: 33.3%;
-    flex: 3;
-    margin-bottom: 8.5vh;
-  }
+    margin-top: 16px;
 
-  &--natural {
-    margin-top: -2.5vh;
+    &--natural {
+      margin-top: 32px;
+    }
   }
 }
 
@@ -87,7 +90,10 @@
   @include phones {
     margin-left: 6%;
     width: 80%;
+    max-height: 100%;
+    height: 100%;
     min-height: 100%;
+    margin-top: 34px;
   }
 }
 
@@ -97,8 +103,10 @@
   text-align: center;
   line-height: 1.2;
   margin-top: 34px;
+  display: flex;
 
   @include phones {
+    margin-top: 0;
     text-align: left;
   }
 }
@@ -108,8 +116,10 @@
   font-family: 'Ubuntu';
   font-weight: 300;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
   line-height: 1.75;
+  display: block;
+
 
   @include phones {
     text-align: left;
@@ -119,26 +129,30 @@
 
 .best__img {
   width: 95px;
+  min-width: 95px;
+  display: flex;
 
   &--meat {
     margin: 0 2px -2px 0;
     height: 90px;
+      @include phones {
+      margin: -16px 0 0 0;
+    }
   }
 
   &--hand {
     margin: 0 0 2px 0;
     height: 86px;
       @include phones {
-      margin: -4.5vh 0 0 0;
+      margin: -36px 0 0 0;
     }
   }
 
   &--natural {
   height: 76px;
   margin: 4px -2px 6px 0;
-
       @include phones {
-      margin: -4.5vh 0 0 0;
+      margin: -72px 0 0 0;
     }
   }
 }

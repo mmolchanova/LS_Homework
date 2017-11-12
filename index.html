@@ -32,11 +32,25 @@
             </nav>
             <button type="button" class="order__btn">заказать</button>
             <button type="button" class="header__burger-btn">
-              <span class="burger-btn__line"></span>
-              <span class="burger-btn__line"></span>
-              <span class="burger-btn__line"></span>
+              <div class="burger-btn__lines">
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+                <span class="burger-btn__line"></span>
+              </div>
+              <div class="burger-btn__close-lines "></div>
             </button>
           </header>
+
+          <nav class="fullscreen-nav">
+            <ul class="fullscreen-nav__list">
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="1">почему мы</a></li>
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="4">меню</a></li>
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="5">советы</a></li>
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="3">кто мы</a></li>
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="8">свяжитесь с нами</a></li>
+              <li class="fullscreen-nav__item"><a href="#" class="fullscreen-nav__link" data-goto="7">контакты</a></li>
+            </ul>
+          </nav>
 
           <div class="general__content">
             <div class="general__img">
@@ -103,6 +117,62 @@
           </div>
 
         </div>
+      </section>
+
+
+
+      <section class="section burgers">
+
+        <div class="slider__section slider__section--prew">
+          <a href="#" class="slider__link slider__link--prew">
+            <svg class="slider__img">
+             <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
+           </svg>
+          </a>
+        </div>
+
+        <div class="container burgers__container">
+
+          <div class="burgers__content">
+            <div class="burgers__img">
+              <img class="burgers__img-pic" src="img/content/burger_dark.png" alt="Dark Beef Burger">
+            </div>
+            <div class="burgers__desc">
+              <h2 class="section__title section__title--white section__title--burgers">Dark BEEF Burger</h2>
+              <div class="burgers__desc-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+              <div class="burgers__desc-info">
+                <div class="burgers__desc-price">
+                  <span class="price__number section__title">500</span>
+                  <span class="price__currency">рублей</span>
+                </div>
+                <button type="button" class="order__btn">заказать</button>
+              </div>
+            </div>
+            <div class="burgers__composition">
+              <svg class="composition__img">
+                <use xlink:href="img/sprite/sprite.svg#burger" />
+              </svg>
+              <div class="composition__text">состав</div>
+            </div>
+            <div class="burgers__kcal">
+              <svg class="kcal__img">
+                <use xlink:href="img/sprite/sprite.svg#kkal" />
+                <div class="kcal__number">1200</div>
+              </svg>
+              <div class="kcal__text">ккал</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider__section slider__section--next">
+          <a href="#" class="slider__link slider__link--next">
+            <svg class="slider__img">
+             <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
+           </svg>
+          </a>
+        </div>
+
       </section>
 
       <section class="section team">
@@ -470,6 +540,8 @@
 
   <script src="svg4everybody-master/dist/svg4everybody.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,301 @@
+.burgers {
+  background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.burgers__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.burgers__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7.5vh;
+  }
+
+  @include phones {
+    padding-top: 11.5vh;
+  }
+}
+
+.burgers__img, .burgers__desc {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+
+  @include tablets {
+    align-items: center;
+    max-width: 100%;
+  }
+}
+
+.burgers__img-pic {
+  max-width: 107%;
+  width: 107%;
+  display: flex;
+  margin-left: -7%;
+
+  @include tablets {
+    width: 100%;
+    max-width: 100%;
+    margin-left: -2%;
+  }
+  @include phones {
+    width: 92%;
+    max-width: 92%;
+    margin-left: 0;
+    max-height: 70vw;
+  }
+}
+
+.burgers__desc {
+  display: flex;
+  max-width: 100%;
+  padding-left: 1.4%;
+  padding-bottom: 20vh;
+
+  @include tablets {
+    width: 92%;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 2.8vh;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-top: 1.6vh;
+
+  }
+}
+
+.section__title--burgers {
+  line-height: 0.9;
+  width: 100%;
+
+  @include tablets {
+    line-height: 0.85;
+  }
+
+  @include phones {
+    line-height: 1.2;
+    width: 75%;
+  }
+}
+
+.burgers__desc-text {
+  color: #fff;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-top: -3.6vh;
+  white-space: wrap;
+  width: 100%;
+  margin-bottom: 4vh;
+
+
+  @include tablets {
+    margin-bottom: 3.5vh;
+    margin-top: -4.1vh;
+  }
+  @include phones {
+    margin-top: -6.0vh;
+    margin-bottom: 2.5vh;
+  }
+}
+
+.burgers__desc-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 325px;
+
+  @include tablets {
+    width: 330px;
+  }
+  @include phones {
+    margin-left: -1%;
+    width: 280px;
+  }
+}
+
+.burgers__desc-price {
+  color: $orange;
+  font-family: 'Gagalin';
+  font-size: 30px;
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+
+.price__number {
+  margin-right: -7px;
+  line-height: 0.9;
+
+  @include phones {
+    margin-right: -2px;
+    line-height: 0.7;
+  }
+}
+
+
+.burgers__composition {
+  position: absolute;
+  left: 0;
+  top: 14vh;
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  line-height: 2.1;
+  width: 90px;
+  height: 90px;
+  background-color: #f08c33;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    left: 11.7%;
+    top: 13.2vh;
+  }
+
+  @include phones {
+    left: -2.5%;
+    top: 6.4vh;
+  }
+}
+
+.composition__img {
+  fill: #fff;
+  width: 45px;
+  height: 45px;
+  margin-top: 6px;
+}
+
+.burgers__kcal {
+  position: absolute;
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: 20px;
+  opacity: .5;
+  left: 0;
+  bottom: 13.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    left: initial;
+    bottom: initial;
+    right: 11.7%;
+    top: 13.2vh;
+  }
+
+  @include phones {
+    right: -2.5%;
+    top: 6.4vh;
+  }
+}
+
+.kcal__img {
+  fill: #fff;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.kcal__number {
+  position: absolute;
+  display: flex;
+  top: 32%;
+  left: calc(50% - 15px);
+}
+
+.kcal__text {
+  font-size: 14px;
+  display: inline-flex;
+  text-align: center;
+}
+
+.slider__section {
+  position: relative;
+  width: 7%;
+
+  @include tablets {
+    width: 10.5%;
+  }
+
+  @include phones {
+    width: 2%;
+  }
+}
+
+.slider__link {
+  display: block;
+  position: absolute;
+  bottom: calc(50% - 20px);
+
+  &--prew {
+    right: 0;
+    .slider__img {
+      transform: rotate(90deg);
+    }
+    @include phones {
+      right: -22px;
+      bottom: 50%;
+    }
+  }
+  &--next {
+    left: 0; 
+    .slider__img {
+      transform: rotate(-90deg);
+    }
+    @include phones {
+      left: -22px;
+      bottom: 50%;
+    }
+  }
+
+  &:hover {
+    animation: size 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    -webkit-animation: size 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+.slider__img {
+  width: 29px;
+  height: 29px;
+  fill: #fff;
+}

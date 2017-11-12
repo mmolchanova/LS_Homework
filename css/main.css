@@ -382,7 +382,8 @@ h6 {
 
 .burger-btn__close-lines {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
   .burger-btn__close-lines:before, .burger-btn__close-lines:after {
     position: absolute;
     right: 25%;

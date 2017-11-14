@@ -9,21 +9,20 @@
 .best__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding-bottom: 16vh;
   width: 100%;
   max-width: 100%;
+  margin-bottom: 16vh;
 
   @include tablets {
-    padding-bottom: 26.5vh;
+    margin-bottom: 26.5vh;
   }
 
   @include phones {
-    justify-content: flex-start;
     min-width: 300px;
     width: 100%;
-    padding-top: 5.3vh;
+    margin-bottom: 16.9vh;
   }
 }
 
@@ -44,7 +43,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-left: 6.5%;
-    margin-top: -3.95vh;
+    margin-top: -32px;
     flex: 0 0 auto;
     margin-right: 1%;
     max-width: 100%;
@@ -69,12 +68,12 @@
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
-    margin-top: -0.15vh;
+    margin-top: -1px;
     flex: 0 0 auto;
     max-width: 100%;
 
     &--natural {
-      margin-top: -1.8vh;
+      margin-top: -14.5px;
     }
   }
 }
@@ -89,7 +88,7 @@
     margin-left: 6%;
     max-width: 67vw;
     min-height: 100%;
-    margin-top: 34px;
+    margin-top: 4.3vh;
     flex: 0 0 auto;
   }
 }
@@ -127,7 +126,6 @@
 
 .best__img {
   width: 95px;
-  // min-width: 25vw;
   display: flex;
 
   &--meat {

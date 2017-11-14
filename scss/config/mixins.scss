@@ -8,8 +8,8 @@
 @mixin btn($color) {
   display: block;
   border: none;
-  height: 35px;
-  min-width: 98px;
+  // height: 35px;
+  // min-width: 98px;
   background-color: $color;
   color: #fff;
   text-transform: uppercase;
@@ -21,10 +21,15 @@
   text-align: center;
   line-height: 35px;
   transition: .5s;
+  padding: 1px 17px;
 
   &:hover {
     cursor: pointer;
     background-color: darken($color, 7%);
+  }
+
+  @include phones {
+    padding: 0 17px;
   }
 }
 

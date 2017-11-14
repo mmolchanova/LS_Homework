@@ -78,14 +78,6 @@
 
 .order__btn {
   @include btn($orange);
-
-  @include tablets {
-    padding: 2px 17px;
-  }
-
-  @include phones {
-    padding: 0 17px;
-  }
 }
 
 .header__burger-btn {
@@ -247,6 +239,7 @@
 .general__img-pic {
   max-width: 100%;
   margin-top: -11vh;
+  object-fit: contain;
 
   @include tablets {
     margin-top: 0;
@@ -296,8 +289,7 @@
   font-weight: 500;
   font-size: 65px;
   line-height: 0.95;
-  margin-top: -8.2vh;
-  white-space: wrap;
+  margin-top: -51px;
   width: 100%;
 
   @include tablets {

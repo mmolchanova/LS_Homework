@@ -31,11 +31,7 @@
   @include tablets {
     flex-direction: column;
     align-items: center;
-    padding-top: 7.5vh;
-  }
-
-  @include phones {
-    padding-top: 11.5vh;
+    margin-top: 20.5vh;
   }
 }
 
@@ -73,7 +69,7 @@
   display: flex;
   max-width: 100%;
   padding-left: 1.4%;
-  padding-bottom: 20vh;
+  margin-bottom: 130px;
 
   @include tablets {
     width: 92%;
@@ -85,8 +81,7 @@
 
   @include phones {
     width: 100%;
-    margin-top: 1.6vh;
-
+    margin-top: 8vh;
   }
 }
 
@@ -101,6 +96,7 @@
   @include phones {
     line-height: 1.2;
     width: 75%;
+    min-width: 280px;
   }
 }
 
@@ -110,10 +106,9 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 1.75;
-  margin-top: -3.6vh;
-  white-space: wrap;
+  margin-top: -23px;
   width: 100%;
-  margin-bottom: 4vh;
+  margin-bottom: 26px;
 
 
   @include tablets {
@@ -131,6 +126,7 @@
   align-items: flex-end;
   justify-content: space-between;
   width: 325px;
+  flex: 0 0 auto;
 
   @include tablets {
     width: 330px;
@@ -165,7 +161,8 @@
 .burgers__composition {
   position: absolute;
   left: 0;
-  top: 14vh;
+  top: 50vh;
+  transform: translateY(-234px);
   color: #fff;
   font-family: 'Gagalin';
   font-size: 14px;
@@ -181,12 +178,12 @@
 
   @include tablets {
     left: 11.7%;
-    top: 13.2vh;
+    transform: translateY(-57vh);
   }
 
   @include phones {
     left: -2.5%;
-    top: 6.4vh;
+    transform: translateY(-64vh);
   }
 }
 
@@ -204,7 +201,8 @@
   font-size: 20px;
   opacity: .5;
   left: 0;
-  bottom: 13.5vh;
+  top: 50vh;
+  transform: translateY(162px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,12 +212,12 @@
     left: initial;
     bottom: initial;
     right: 11.7%;
-    top: 13.2vh;
+    transform: translateY(-57vh);
   }
 
   @include phones {
     right: -2.5%;
-    top: 6.4vh;
+    transform: translateY(-64vh);
   }
 }
 

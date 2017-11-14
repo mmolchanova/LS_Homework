@@ -7,6 +7,8 @@
 }
 
 .section__title--order {
+  max-width: 100%;
+
   @include phones {
     line-height: 1.2;
     margin-bottom: 3vh;
@@ -19,15 +21,15 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 11.7vh;
+  margin-bottom: 76px;
 
   @include tablets {
-    padding-bottom: 13.5vh;
+    margin-bottom: 13.5vh;
   }
 
   @include phones {
-    padding-bottom: 0;
-    padding-top: 3vh;
+    margin-bottom: 0;
+    margin-top: 3vh;
   }
 }
 
@@ -56,7 +58,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-right: 15px;
+  margin-right: 18px;
 
   &:last-child {
       margin: 0;
@@ -77,7 +79,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: 17px;
+  margin-right: 18px;
 
   &:last-child {
       margin-right: 0;
@@ -115,7 +117,7 @@
   margin-bottom: 5px;
 
   @include tablets {
-    margin-bottom: 3px;
+    margin-bottom: 0.4vh;
   }
 }
 
@@ -133,13 +135,21 @@
   }
 
   @include tablets {
-    margin-bottom: 17px;
+    margin-bottom: 2.1vh;
+  }
+
+  @include phones {
+    height: 4.5vh;
   }
 }
 
 .form__textarea {
   height: 110px;
   resize: none;
+
+  @include phones {
+    height: 13.75vh;
+  }
 }
 
 .buttons__row {
@@ -148,9 +158,9 @@
   margin-bottom: 18px;
 
   @include phones{
-    margin-top: 20px;
+    margin-top: 2.5vh;
     justify-content: center;
-    margin-bottom: 31px;
+    margin-bottom: 3.9vh;
   }
 }
 
@@ -245,8 +255,8 @@
   }
 
   @include phones {
-    margin-top: 5px;
-    margin-left: 7px;
+    margin-top: 0.6vh;
+    margin-left: 0.9vh;
   }
 }
 
@@ -256,6 +266,7 @@
   outline: none;
   border: 1px dotted transparent;
   margin-left: 2px;
+  padding: 0px 16px;
 
   &:focus {
     border: 1px dotted #fff;

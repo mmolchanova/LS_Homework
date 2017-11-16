@@ -7,20 +7,12 @@
 }
 
 .team__container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.team__content {
   position: absolute;
   right: 0;
   top: 0;
   display: flex;
   width: 49.3%;
-  min-width: 480px;
+
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,16 +29,33 @@
   }
 
   @include phones {
-    padding-top: 6.4vh;
-    min-width: 300px;
-    max-width: 100vw;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include phones {
+    justify-content: space-between;
+    margin-top: 6.4vh;
+    height: 71.5vh;
+  }
+}
+
+.section__title--team {
+  @include phones {
+    margin-bottom: 0;
   }
 }
 
 .team__list {
   margin-top: -0.5vh;
   margin-left: 18px;
-
+  display: flex;
+  flex-direction: column;
 
   @include tablets {
     margin: 0;
@@ -56,8 +65,9 @@
   }
 
   @include phones {
-    margin-top: 2vh;
-
+    margin-top: 0;
+    height: 53vh;
+    justify-content: space-between;
   }
 }
 
@@ -69,6 +79,7 @@
   font-size: 14px;
   position: relative;
   margin-bottom: 4.5vh;
+  flex: 0 0 auto;
 
   &:before {
     content: '';
@@ -96,7 +107,7 @@
 
   @include phones {
     font-size: 24px;
-    margin-bottom: 3.3vh;
+    margin-bottom: 1vh;
 
     &:before {
     left: -16px;
@@ -118,7 +129,7 @@
 
   @include phones {
     margin-top: -2vh;
-    margin-bottom: 2.2vh;
+    margin-bottom: 0.8vh;
   }
 }
 
@@ -156,7 +167,8 @@
   }
 
   @include phones {
-    margin-bottom: 2.1vh;
+    margin-top: 2.3vh;
+    margin-bottom: 2.2vh;
   }
 
 }

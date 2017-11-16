@@ -14,8 +14,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   width: 100%;
+  // flex: 0 0 auto;
+  height: 100vh;
+  position: relative;
+
+  @include tablets {
+    justify-content: flex-end;
+    margin-bottom: 0.5vh;
+  }
 }
 
 .burgers__content {
@@ -23,15 +30,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  flex-grow: 1;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex: 0 0 auto;
 
   @include tablets {
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20.5vh;
+    min-height: 50vh;
   }
 }
 
@@ -43,6 +51,7 @@
   @include tablets {
     align-items: center;
     max-width: 100%;
+    flex-basis: initial;
   }
 }
 
@@ -61,7 +70,7 @@
     width: 92%;
     max-width: 92%;
     margin-left: 0;
-    max-height: 70vw;
+    max-height: 42vh;
   }
 }
 
@@ -81,13 +90,15 @@
 
   @include phones {
     width: 100%;
-    margin-top: 8vh;
+    margin-top: 1.4vh;
+    margin-bottom: 8.7vh;
   }
 }
 
 .section__title--burgers {
   line-height: 0.9;
   width: 100%;
+  flex: 0 0 auto;
 
   @include tablets {
     line-height: 0.85;
@@ -110,7 +121,6 @@
   width: 100%;
   margin-bottom: 26px;
 
-
   @include tablets {
     margin-bottom: 3.5vh;
     margin-top: -4.1vh;
@@ -118,6 +128,7 @@
   @include phones {
     margin-top: -6.0vh;
     margin-bottom: 2.5vh;
+    line-height: 3.15vh;
   }
 }
 
@@ -157,7 +168,6 @@
   }
 }
 
-
 .burgers__composition {
   position: absolute;
   left: 0;
@@ -177,13 +187,15 @@
   align-items: center;
 
   @include tablets {
-    left: 11.7%;
-    transform: translateY(-57vh);
+    left: 12.7%;
+    top: 0;
+    transform: translateY(13.5vh);
   }
 
   @include phones {
-    left: -2.5%;
-    transform: translateY(-64vh);
+    left: 0;
+    top: 0;
+    transform: translateY(6.5vh);
   }
 }
 
@@ -211,13 +223,15 @@
   @include tablets {
     left: initial;
     bottom: initial;
-    right: 11.7%;
-    transform: translateY(-57vh);
+    right: 12.7%;
+    top: 0;
+    transform: translateY(13.5vh);
   }
 
   @include phones {
-    right: -2.5%;
-    transform: translateY(-64vh);
+    right: 0;
+    top: 0;
+    transform: translateY(6.5vh);
   }
 }
 

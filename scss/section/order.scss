@@ -6,14 +6,10 @@
   position: relative;
 }
 
-.section__title--order {
-  max-width: 100%;
-
-  @include phones {
-    line-height: 1.2;
-    margin-bottom: 3vh;
-    max-width: 100vw;
-  }
+.order__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .order__content {
@@ -22,14 +18,26 @@
   align-items: center;
   width: 100%;
   margin-bottom: 76px;
+  flex: 0 0 auto;
 
   @include tablets {
     margin-bottom: 13.5vh;
   }
 
   @include phones {
+    min-height: 86.5vh;
+    justify-content: space-between;
     margin-bottom: 0;
-    margin-top: 3vh;
+  }
+}
+
+.section__title--order {
+  max-width: 100%;
+
+  @include phones {
+    line-height: 7.5vh;
+    margin-bottom: 1.5vh;
+    max-width: 100vw;
   }
 }
 
@@ -135,7 +143,7 @@
   }
 
   @include tablets {
-    margin-bottom: 2.1vh;
+    margin-bottom: 1.5vh;
   }
 
   @include phones {
@@ -152,21 +160,32 @@
   }
 }
 
+.form__buttons {
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 19.9vh;
+    margin-top: 2vh;
+  }
+}
+
 .buttons__row {
   width: 100%;
   display: flex;
   margin-bottom: 18px;
 
   @include phones{
-    margin-top: 2.5vh;
+    margin-top: 1vh;
     justify-content: center;
-    margin-bottom: 3.9vh;
+    margin-bottom: 1vh;
   }
 }
 
 .buttons__row--radio {
   @include phones {
-    margin-left: 9px;
+    margin-left: 15px;
   }
 }
 
@@ -270,6 +289,11 @@
 
   &:focus {
     border: 1px dotted #fff;
+  }
+
+  @include phones {
+    padding: 0px 15px;
+    height: 35px;
   }
 }
 

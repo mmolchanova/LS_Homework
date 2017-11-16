@@ -163,5 +163,10 @@
   font-weight: 300;
   display: none;
   line-height: 1.8;
+
+
+  @include phones {
+    line-height: 3.15vh;
+  }
 }
 

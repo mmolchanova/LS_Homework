@@ -1,18 +1,11 @@
 let burgerBtn = document.querySelector('.header__burger-btn')
-let burgerBtnLines = document.querySelector('.burger-btn__lines')
-let burgerBtnClose = document.querySelector('.burger-btn__close-lines')
+let burgerBtnBlock = document.querySelector('.burger-block')
+let burgerBtnClose = document.querySelector('.close-lines')
 let fullscreenNav = document.querySelector('.fullscreen-nav')
-// console.log(burgerBtn)
-// console.log(burgerBtnLines)
-// console.log(burgerBtnClose)
-// console.log(fullscreenNav)
 
 burgerBtn.addEventListener('click', function showMenu () {
-  burgerBtnLines.classList.toggle('visually-hidden')
+  burgerBtnBlock.classList.toggle('visually-hidden')
   burgerBtnClose.classList.toggle('visually-hidden')
-
-// console.log(burgerBtnLines)
-// console.log(burgerBtnClose)
 
   let menuDisplay = getComputedStyle(fullscreenNav).display
   if (menuDisplay === 'none') {
@@ -20,5 +13,33 @@ burgerBtn.addEventListener('click', function showMenu () {
   }
   else {
     fullscreenNav.style.display = 'none'
+  }
+})
+
+let teamItemAcc = $('.team__item')
+
+teamItemAcc.on('click', (e) => {
+  e.preventDefault()
+
+  let elem = $(e.currentTarget)
+
+  teamItemAcc.removeClass('team__item--active')
+  elem.addClass('team__item--active')
+})
+
+
+let menuItemAcc = $('.menu__item')
+
+menuItemAcc.on('click', (e) => {
+  e.preventDefault()
+
+  let elem = $(e.currentTarget)
+
+  if (elem.hasClass('menu__item--active')) {
+    elem.removeClass('menu__item--active')
+  }
+  else {
+    menuItemAcc.removeClass('menu__item--active')
+    elem.addClass('menu__item--active')
   }
 })

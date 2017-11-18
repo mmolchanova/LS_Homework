@@ -116,24 +116,15 @@
 }
 
 .item-content {
-  display: none;
-  margin-top: -2.2vh;
-  margin-bottom: 4vh;
-
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-    margin-top: -1vh;
-    margin-bottom: 1.5vh;
-  }
-
-  @include phones {
-    margin-top: -2vh;
-    margin-bottom: 0.8vh;
-  }
+  display: flex;
+  height: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+  transition: .3s;
 }
 
 .team__item--active {
+
   .team__item-title {
     color: $yellow;
 
@@ -150,7 +141,21 @@
   }
 
   .item-content {
-    display: flex;
+    height: 114px;
+    margin-top: -2.2vh;
+    margin-bottom: 4vh;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      margin-top: -1vh;
+      margin-bottom: 1.5vh;
+    }
+
+    @include phones {
+      margin-top: -2vh;
+      margin-bottom: 0.8vh;
+    }
   }
 
 }

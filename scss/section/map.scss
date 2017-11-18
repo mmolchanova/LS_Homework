@@ -1,9 +1,9 @@
-.map {
-  background-image: url('../img/bg/map-bg.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;  
+.map { 
   position: relative;
+}
+
+.map__container {
+  height: 100%;
 }
 
 .map__content {

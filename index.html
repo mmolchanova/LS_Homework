@@ -130,17 +130,16 @@
       <section class="section burgers">
 
         <div class="slider__section slider__section--prev">
-          <a href="#" class="slider__link slider__link--prev">
+          <button class="slider__btn slider__btn--prev">
             <svg class="slider__img">
              <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
            </svg>
-          </a>
+          </button>
         </div>
 
         <div class="container burgers__container">
 
           <ul class="burgers__list">
-
             <li class="burgers__content burgers__content--active">
               <div class="burgers__img">
                 <img class="burgers__img-pic" src="img/content/burger_dark.png" alt="Dark Beef Burger">
@@ -221,31 +220,88 @@
                 </div>
               </div>
             </li>
-
           </ul>
 
-          <div class="burgers__composition">
-            <svg class="composition__img">
-              <use xlink:href="img/sprite/sprite.svg#burger" />
-            </svg>
-            <div class="composition__text">состав</div>
-          </div>
+            <div class="burgers__composition">
+              <svg class="burgers__composition-img">
+                <use xlink:href="img/sprite/sprite.svg#burger" />
+              </svg>
+              <div class="burgers__composition-text">состав</div>
+              <ul class="burgers__composition-list">
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--orange">
+                      <use xlink:href="img/sprite/sprite.svg#beef" />
+                    </svg>
+                    <span class="burgers__composition-product">Говядина</span>
+                    <span class="burgers__composition-grams">300 г</span>
+                  </div>
+                </li>
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--yellow">
+                      <use xlink:href="img/sprite/sprite.svg#buns" />
+                    </svg>
+                    <span class="burgers__composition-product">Булочки</span>
+                    <span class="burgers__composition-grams">100 г</span>
+                  </div>
+                </li>
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--green">
+                      <use xlink:href="img/sprite/sprite.svg#salad" />
+                    </svg>
+                    <span class="burgers__composition-product">Зелень</span>
+                    <span class="burgers__composition-grams">70 г</span>
+                  </div>
+                </li>
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--orange">
+                      <use xlink:href="img/sprite/sprite.svg#sauce" />
+                    </svg>
+                    <span class="burgers__composition-product">Соус</span>
+                    <span class="burgers__composition-grams">150 г</span>
+                  </div>
+                </li>
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--green">
+                      <use xlink:href="img/sprite/sprite.svg#cucumber" />
+                    </svg>
+                    <span class="burgers__composition-product">Овощи</span>
+                    <span class="burgers__composition-grams">200 г</span>
+                  </div>
+                </li>
+                <li class="burgers__composition-item">
+                  <div class="burgers__composition-row">
+                    <svg class="burgers__composition-img burgers__composition-img--yellow">
+                      <use xlink:href="img/sprite/sprite.svg#cheese" />
+                    </svg>
+                    <span class="burgers__composition-product">Сыр</span>
+                    <span class="burgers__composition-grams">80 г</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+
           <div class="burgers__kcal">
-            <svg class="kcal__img">
+            <svg class="burgers__kcal-img">
               <use xlink:href="img/sprite/sprite.svg#kkal" />
             </svg>
-            <div class="kcal__number">1200</div>
-            <div class="kcal__text">ккал</div>
+            <div class="burgers__kcal-number">1200</div>
+            <div class="burgers__kcal-text">ккал</div>
           </div>
 
         </div>
 
         <div class="slider__section slider__section--next">
-          <a href="#" class="slider__link slider__link--next">
+          <button class="slider__btn slider__btn--next">
             <svg class="slider__img">
              <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
            </svg>
-          </a>
+          </button>
         </div>
 
       </section>

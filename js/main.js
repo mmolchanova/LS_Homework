@@ -49,6 +49,8 @@ $(function() {
       menuItemAcc.removeClass('menu__item--active')
       elem.addClass('menu__item--active')
     }
+
+
   })
 
   menuClose.on('click', (e) => {
@@ -110,7 +112,19 @@ $(function() {
 
 //FancyBox
 
-//Слайдер секции "Бургер"
+//Секция "Бургер"
+//Состав
+$(function() {
+  let composition = $('.burgers__composition')
+
+  composition.on('click', (e) => {
+    console.log(e.currentTarget)
+    composition.toggleClass('burgers__composition--active')
+  })
+
+})
+
+//Слайдер секции
 $(function(){
 
   let moveSlide = function (container, itemNum) {

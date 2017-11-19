@@ -207,13 +207,74 @@
     top: 0;
     transform: translateY(6.5vh);
   }
+
+  &:hover, &--active {
+    background-color: $orange;
+    cursor: pointer;
+
+    .burgers__composition-list {
+      display: flex;
+    }
+  }
 }
 
-.composition__img {
+.burgers__composition-img {
   fill: #fff;
   width: 45px;
   height: 45px;
   margin-top: 6px;
+}
+
+.burgers__composition-list {
+  width: 270px;
+  height: 330px;
+  background-color: rgba(#fff, .9);
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: #000;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 7px;
+}
+
+.burgers__composition-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.burgers__composition-product {
+  width: 90px;
+  text-align: left;
+}
+
+.burgers__composition-grams {
+  width: 50px;
+  text-align: right;
+}
+
+.burgers__composition-img {
+  width: 40px;
+  height: 40px;
+
+  &--orange {
+    fill: $orange;
+  }
+  &--yellow {
+    fill: $yellow;
+  }
+  &--green {
+    fill: $green;
+  }
+}
+
+.burgers__composition-grams {
+  font-weight: 300;
 }
 
 .burgers__kcal {
@@ -245,21 +306,21 @@
   }
 }
 
-.kcal__img {
+.burgers__kcal-img {
   fill: #fff;
   width: 60px;
   height: 60px;
   position: relative;
 }
 
-.kcal__number {
+.burgers__kcal-number {
   position: absolute;
   display: flex;
   top: 32%;
   left: calc(50% - 15px);
 }
 
-.kcal__text {
+.burgers__kcal-text {
   font-size: 14px;
   display: inline-flex;
   text-align: center;
@@ -278,10 +339,13 @@
   }
 }
 
-.slider__link {
+.slider__btn {
   display: block;
   position: absolute;
   bottom: calc(50% - 20px);
+  border: none;
+  outline: none;
+  background: transparent;
 
   &--prev {
     right: 0;
@@ -305,11 +369,11 @@
   }
 
   &:hover {
-    animation: size 1s;
+    animation: size 0.7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in;
-    -webkit-animation: size 1s;
+    -webkit-animation: size 0.7s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     -webkit-animation-timing-function: ease-in;

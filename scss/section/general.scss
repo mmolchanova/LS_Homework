@@ -98,7 +98,7 @@
   }
 
   @include phones {
-    margin: 6px 0.7% 0 5%;
+    margin: 6px 3.5% 0 5%;
   }
 
   &:hover {
@@ -137,6 +137,7 @@
     transform: rotate(-45deg);
   }
 }
+
 .burger-block__line {
   background-color: #fff;
   display: block;

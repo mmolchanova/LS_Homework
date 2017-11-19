@@ -36,10 +36,10 @@
 
   @include tablets {
     min-height: 100vh;
-    max-height:100vh;
+    // max-height:100vh;
   }
   @include phones {
-    min-height: 568px;
+    min-height: 480px;
   }
 }
 

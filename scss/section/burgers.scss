@@ -18,6 +18,7 @@
   // flex: 0 0 auto;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 
   @include tablets {
     justify-content: flex-end;
@@ -25,15 +26,24 @@
   }
 }
 
+.burgers__list {
+  white-space: nowrap;
+  width: 100%;
+  font-size: 0;
+  position: absolute;
+  left: 0;
+}
+
 .burgers__content {
   width: 100%;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   position: relative;
   flex: 0 0 auto;
+  white-space: initial;
 
   @include tablets {
     flex-direction: column;
@@ -273,7 +283,7 @@
   position: absolute;
   bottom: calc(50% - 20px);
 
-  &--prew {
+  &--prev {
     right: 0;
     .slider__img {
       transform: rotate(90deg);

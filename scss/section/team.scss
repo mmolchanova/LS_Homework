@@ -146,6 +146,7 @@
     margin-bottom: 4vh;
 
     @include tablets {
+      height: 208px; 
       flex-direction: column;
       align-items: center;
       margin-top: -1vh;
@@ -153,7 +154,7 @@
     }
 
     @include phones {
-      height: 220px;
+      height: 225px;
       margin-top: -2vh;
       margin-bottom: 0.8vh;
     }

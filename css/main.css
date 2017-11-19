@@ -2340,6 +2340,9 @@ h6 {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   border-radius: 7px; }
+  @media screen and (max-width: 480px) {
+    .burgers__composition-list {
+      width: 210px; } }
 
 .burgers__composition-row {
   display: -webkit-box;
@@ -2355,11 +2358,11 @@ h6 {
   align-items: center; }
 
 .burgers__composition-product {
-  width: 90px;
+  width: 30%;
   text-align: left; }
 
 .burgers__composition-grams {
-  width: 50px;
+  width: 18%;
   text-align: right; }
 
 .burgers__composition-img {

@@ -240,6 +240,10 @@
   flex-direction: column;
   justify-content: space-around;
   border-radius: 7px;
+
+  @include phones {
+    width: 210px;
+  }
 }
 
 .burgers__composition-row {
@@ -249,12 +253,12 @@
 }
 
 .burgers__composition-product {
-  width: 90px;
+  width: 30%;
   text-align: left;
 }
 
 .burgers__composition-grams {
-  width: 50px;
+  width: 18%;
   text-align: right;
 }
 

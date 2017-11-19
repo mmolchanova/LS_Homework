@@ -118,7 +118,6 @@ $(function() {
   let composition = $('.burgers__composition')
 
   composition.on('click', (e) => {
-    console.log(e.currentTarget)
     composition.toggleClass('burgers__composition--active')
   })
 

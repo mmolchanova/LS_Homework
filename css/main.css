@@ -92,12 +92,6 @@ h6 {
   width: 1px !important;
   overflow: hidden; }
 
-.wrapper {
-  overflow: hidden;
-  width: 100%;
-  min-height: 100%;
-  position: relative; }
-
 .container {
   width: 100%;
   max-width: 960px;
@@ -126,8 +120,9 @@ h6 {
       padding: 0 2%; } }
 
 .maincontant {
-  height: 100%;
-  min-height: 650px; }
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
 
 .section {
   background-color: rgba(20, 20, 20, 0.31);

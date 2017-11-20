@@ -1,3 +1,20 @@
+//OPS
+onePageScroll(".main", {
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                                    // the browser's width is less than 600, the fallback will kick in.
+});
+
 // Для полноэкранного меню
 $(function() {
   let burgerBtn = $('.header__burger-btn')
@@ -32,24 +49,22 @@ $(function() {
   })
 })
 
-  // Для секции "меню"
+// Для секции "меню"
 $(function() {
   let menuItemAcc = $('.menu__item')
   let menuClose = $('.menu-content__close')
 
-  menuItemAcc.on('click', (e) => {
+  $(document).on('click', (e) => {
     e.preventDefault()
 
-    let elem = $(e.currentTarget)
+    let elem = $(e.target).closest(menuItemAcc)
 
-    if (elem.hasClass('menu__item--active')) {
-      elem.removeClass('menu__item--active')
-    }
-    else {
+    if (elem.length) {
+      elem.siblings().removeClass('menu__item--active')
+      elem.toggleClass('menu__item--active')
+    } else {
       menuItemAcc.removeClass('menu__item--active')
-      elem.addClass('menu__item--active')
     }
-
 
   })
 
@@ -59,6 +74,71 @@ $(function() {
     if (elem.hasClass('menu__item--active')) {
       elem.removeClass('menu__item--active')
     }
+  })
+
+})
+
+//FancyBox
+
+//Для секции "Бургер"
+  //Состав
+$(function() {
+  let composition = $('.burgers__composition')
+
+  $('.burgers__container').on('click', (e) => {
+
+    let elem = $(e.target).closest(composition)
+    if (elem.length) {
+      elem.addClass('burgers__composition--active')
+    } else {
+      composition.removeClass('burgers__composition--active')
+    }
+  })
+
+})
+
+  //Слайдер секции
+$(function(){
+
+  let moveSlide = function (container, itemNum) {
+    let
+        items = container.find('.burgers__content'),
+        activeItem = items.filter('.burgers__content--active'),
+        reqItem = items.eq(itemNum),
+        reqIndex = reqItem.index(),
+        list = container.find('.burgers__list'),
+        duration = 500
+
+    if (reqItem.length) {
+      list.animate({
+        'left' : -reqIndex * 100 + '%'
+      }, duration, function () {
+        activeItem.removeClass('burgers__content--active');
+        reqItem.addClass('burgers__content--active');
+      })
+    }
+  }
+
+  $('.slider__section').on('click', (e) => {
+    e.preventDefault();
+
+    let $this = $(e.currentTarget),
+        container = $this.closest('.burgers'),
+        items = container.find('.burgers__content'),
+        activeItem = items.filter('.burgers__content--active'),
+        existedItem, edgeItem, reqItem;
+
+    if ($this.hasClass('slider__section--next')) {
+      existedItem = activeItem.next();
+      edgeItem = items.first();
+    }
+    if ($this.hasClass('slider__section--prev')) {
+      existedItem = activeItem.prev();
+      edgeItem = items.last();
+    }
+
+    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+    moveSlide(container, reqItem);
   })
 
 })
@@ -109,64 +189,4 @@ $(function() {
 
   }
 })
-
-//FancyBox
-
-//Секция "Бургер"
-//Состав
-$(function() {
-  let composition = $('.burgers__composition')
-
-  composition.on('click', (e) => {
-    composition.toggleClass('burgers__composition--active')
-  })
-
-})
-
-//Слайдер секции
-$(function(){
-
-  let moveSlide = function (container, itemNum) {
-    let
-        items = container.find('.burgers__content'),
-        activeItem = items.filter('.burgers__content--active'),
-        reqItem = items.eq(itemNum),
-        reqIndex = reqItem.index(),
-        list = container.find('.burgers__list'),
-        duration = 500
-
-    if (reqItem.length) {
-      list.animate({
-        'left' : -reqIndex * 100 + '%'
-      }, duration, function () {
-        activeItem.removeClass('burgers__content--active');
-        reqItem.addClass('burgers__content--active');
-      })
-    }
-  }
-
-  $('.slider__section').on('click', (e) => {
-    e.preventDefault();
-
-    let $this = $(e.currentTarget),
-        container = $this.closest('.burgers'),
-        items = container.find('.burgers__content'),
-        activeItem = items.filter('.burgers__content--active'),
-        existedItem, edgeItem, reqItem;
-
-    if ($this.hasClass('slider__section--next')) {
-      existedItem = activeItem.next();
-      edgeItem = items.first();
-    }
-    if ($this.hasClass('slider__section--prev')) {
-      existedItem = activeItem.prev();
-      edgeItem = items.last();
-    }
-
-    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
-    moveSlide(container, reqItem);
-  })
-
-})
-
 

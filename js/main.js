@@ -154,7 +154,7 @@ $(function() {
     mapZoom = 11
   }
   else {
-    mapZoom = 10.4
+    mapZoom = 10
   }
 
   function init() {

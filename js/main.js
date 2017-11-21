@@ -1,9 +1,9 @@
 //OPS
-// $(document).ready(function() {
-//   if (document.documentElement.clientWidth > 768) {
-//     $('#fullpage').fullpage();
-//   }
-// })
+$(document).ready(function() {
+  if (document.documentElement.clientWidth > 768) {
+    $('#fullpage').fullpage();
+  }
+})
 
 // Для полноэкранного меню
 $(function() {

@@ -1,6 +1,5 @@
 //OPS
-$(function() {
-  // console.log(document.documentElement.clientWidth);
+$(document).ready(function() {
   if (document.documentElement.clientWidth > 768) {
     $('#fullpage').fullpage();
   }

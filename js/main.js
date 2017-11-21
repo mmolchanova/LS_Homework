@@ -1,3 +1,10 @@
+//OPS
+$(function() {
+  if (document.documentElement.clientWidth > 768) {
+    $('#fullpage').fullpage();
+  }
+})
+
 // Для полноэкранного меню
 $(function() {
   let burgerBtn = $('.header__burger-btn')
@@ -32,24 +39,22 @@ $(function() {
   })
 })
 
-  // Для секции "меню"
+// Для секции "меню"
 $(function() {
   let menuItemAcc = $('.menu__item')
   let menuClose = $('.menu-content__close')
 
-  menuItemAcc.on('click', (e) => {
+  $(document).on('click', (e) => {
     e.preventDefault()
 
-    let elem = $(e.currentTarget)
+    let elem = $(e.target).closest(menuItemAcc)
 
-    if (elem.hasClass('menu__item--active')) {
-      elem.removeClass('menu__item--active')
-    }
-    else {
+    if (elem.length) {
+      elem.siblings().removeClass('menu__item--active')
+      elem.toggleClass('menu__item--active')
+    } else {
       menuItemAcc.removeClass('menu__item--active')
-      elem.addClass('menu__item--active')
     }
-
 
   })
 
@@ -63,67 +68,26 @@ $(function() {
 
 })
 
-// Для секции "карта"
-$(function() {
-    // Подключение карты
-  ymaps.ready(init);
-  let myMap;
-  let mapZoom;
-
-  if (document.documentElement.clientWidth > 768) {
-    mapZoom = 11
-  }
-  else {
-    mapZoom = 10.4
-  }
-
-  function init() {
-    myMap = new ymaps.Map("map", {
-        center: [59.91817154482064,30.30557799999997],
-        zoom: mapZoom,
-        controls: [],
-        behaviors: ['ruler', 'scrollZoom'],
-    });
-    myMap.behaviors.disable('ruler');
-    myMap.behaviors.disable('scrollZoom');
-
-    // Коллекция меток
-    let coords = [
-        [59.94554327989287,30.38935262114668],
-        [59.91142323563909,30.50024587065841],
-        [59.88693161784606,30.319658102103713],
-        [59.97033574821672,30.315194906302924]
-    ],
-    myCollection = new ymaps.GeoObjectCollection({}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/content/map-marker.png',
-          iconImageSize: [46, 57],
-          iconImageOffset: [-26, -52]
-      });
-
-    for (var i = 0; i < coords.length; i++) {
-        myCollection.add(new ymaps.Placemark(coords[i]));
-    }
-
-    myMap.geoObjects.add(myCollection);
-
-  }
-})
-
 //FancyBox
 
-//Секция "Бургер"
-//Состав
+//Для секции "Бургер"
+  //Состав
 $(function() {
   let composition = $('.burgers__composition')
 
-  composition.on('click', (e) => {
-    composition.toggleClass('burgers__composition--active')
+  $('.burgers__container').on('click', (e) => {
+
+    let elem = $(e.target).closest(composition)
+    if (elem.length) {
+      elem.addClass('burgers__composition--active')
+    } else {
+      composition.removeClass('burgers__composition--active')
+    }
   })
 
 })
 
-//Слайдер секции
+  //Слайдер секции
 $(function(){
 
   let moveSlide = function (container, itemNum) {
@@ -169,4 +133,50 @@ $(function(){
 
 })
 
+// Для секции "карта"
+$(function() {
+    // Подключение карты
+  ymaps.ready(init);
+  let myMap;
+  let mapZoom;
+
+  if (document.documentElement.clientWidth > 768) {
+    mapZoom = 11
+  }
+  else {
+    mapZoom = 10
+  }
+
+  function init() {
+    myMap = new ymaps.Map("map", {
+        center: [59.91817154482064,30.30557799999997],
+        zoom: mapZoom,
+        controls: [],
+        behaviors: ['ruler', 'scrollZoom'],
+    });
+    myMap.behaviors.disable('ruler');
+    myMap.behaviors.disable('scrollZoom');
+
+    // Коллекция меток
+    let coords = [
+        [59.94554327989287,30.38935262114668],
+        [59.91142323563909,30.50024587065841],
+        [59.88693161784606,30.319658102103713],
+        [59.97033574821672,30.315194906302924]
+    ],
+    myCollection = new ymaps.GeoObjectCollection({}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/content/map-marker.png',
+          iconImageSize: [46, 57],
+          iconImageOffset: [-26, -52]
+      });
+
+    for (var i = 0; i < coords.length; i++) {
+        myCollection.add(new ymaps.Placemark(coords[i]));
+    }
+
+    myMap.geoObjects.add(myCollection);
+
+  }
+})
 

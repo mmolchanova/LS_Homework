@@ -95,7 +95,6 @@ h6 {
 .wrapper {
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
   position: relative; }
 
 .container {
@@ -2011,7 +2010,9 @@ h6 {
 .burgers {
   background-image: -moz-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background-image: -webkit-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
-  background-image: -ms-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background-image: -ms-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
+
+.burgers__wrapper {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;

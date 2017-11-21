@@ -79,7 +79,7 @@ $(function() {
 
     let elem = $(e.target).closest(composition)
     if (elem.length) {
-      elem.addClass('burgers__composition--active')
+      elem.toggleClass('burgers__composition--active')
     } else {
       composition.removeClass('burgers__composition--active')
     }
@@ -109,7 +109,7 @@ $(function(){
     }
   }
 
-  $('.slider__section').on('click', (e) => {
+  $('.slider-arrow').on('click', (e) => {
     e.preventDefault();
 
     let $this = $(e.currentTarget),
@@ -118,11 +118,11 @@ $(function(){
         activeItem = items.filter('.burgers__content--active'),
         existedItem, edgeItem, reqItem;
 
-    if ($this.hasClass('slider__section--next')) {
+    if ($this.hasClass('slider-arrow--next')) {
       existedItem = activeItem.next();
       edgeItem = items.first();
     }
-    if ($this.hasClass('slider__section--prev')) {
+    if ($this.hasClass('slider-arrow--prev')) {
       existedItem = activeItem.prev();
       edgeItem = items.last();
     }

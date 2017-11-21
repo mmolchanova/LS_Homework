@@ -2447,44 +2447,44 @@ h6 {
   display: inline-flex;
   text-align: center; }
 
-.slider__section {
+.slider-arrow {
   position: relative;
   width: 7%; }
   @media screen and (max-width: 768px) {
-    .slider__section {
+    .slider-arrow {
       width: 10.5%; } }
   @media screen and (max-width: 480px) {
-    .slider__section {
+    .slider-arrow {
       width: 2%; } }
 
-.slider__btn {
+.slider-arrow__btn {
   display: block;
   position: absolute;
   bottom: calc(50% - 20px);
   border: none;
   outline: none;
   background: transparent; }
-  .slider__btn--prev {
+  .slider-arrow__btn--prev {
     right: 0; }
-    .slider__btn--prev .slider__img {
+    .slider-arrow__btn--prev .slider-arrow__img {
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
     @media screen and (max-width: 480px) {
-      .slider__btn--prev {
+      .slider-arrow__btn--prev {
         right: -22px;
         bottom: 50%; } }
-  .slider__btn--next {
+  .slider-arrow__btn--next {
     left: 0; }
-    .slider__btn--next .slider__img {
+    .slider-arrow__btn--next .slider-arrow__img {
       -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
       transform: rotate(-90deg); }
     @media screen and (max-width: 480px) {
-      .slider__btn--next {
+      .slider-arrow__btn--next {
         left: -22px;
         bottom: 50%; } }
-  .slider__btn:hover {
+  .slider-arrow__btn:hover {
     animation: size 0.7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -2494,7 +2494,7 @@ h6 {
     -webkit-animation-direction: alternate;
     -webkit-animation-timing-function: ease-in; }
 
-.slider__img {
+.slider-arrow__img {
   width: 29px;
   height: 29px;
   fill: #fff; }

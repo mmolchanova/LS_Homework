@@ -337,7 +337,7 @@
   text-align: center;
 }
 
-.slider__section {
+.slider-arrow {
   position: relative;
   width: 7%;
 
@@ -350,7 +350,7 @@
   }
 }
 
-.slider__btn {
+.slider-arrow__btn {
   display: block;
   position: absolute;
   bottom: calc(50% - 20px);
@@ -360,7 +360,7 @@
 
   &--prev {
     right: 0;
-    .slider__img {
+    .slider-arrow__img {
       transform: rotate(90deg);
     }
     @include phones {
@@ -370,7 +370,7 @@
   }
   &--next {
     left: 0; 
-    .slider__img {
+    .slider-arrow__img {
       transform: rotate(-90deg);
     }
     @include phones {
@@ -391,7 +391,7 @@
   }
 }
 
-.slider__img {
+.slider-arrow__img {
   width: 29px;
   height: 29px;
   fill: #fff;

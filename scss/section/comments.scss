@@ -70,6 +70,23 @@
 
 }
 
+.comments-block--full {
+  display: none;
+  max-width: 460px;
+  width: 94%;
+
+  // height: 260px;
+  background-color: #fff;
+  color: $dark;
+  border-radius: 7px;
+  padding: 20px;
+  padding-top: 30px;
+
+  .comments-block__text {
+    display: flex;
+  }
+}
+
 .comments-block__title {
   display: flex;
   font-family: 'Gagalin';
@@ -112,6 +129,7 @@
   display: flex;
   @include btn($dark);
   width: 110px;
+  padding: 1px 0;
 
   @include tablets {
     margin-left: 1%;
@@ -120,35 +138,47 @@
   @include phones {
     display: none;
   }
-}
 
-.comments-block__btn-mobile {
-  display: none;
-
-  @include phones {
-    @include btn($dark);
-    display: block;
-    width: 130px;
+  a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
   }
 }
 
-// .comments-block--active {
-//   width: 460px;
-//   height: 260px;
-//   background-color: #fff;
-//   color: $dark;
-//   border-radius: 7px;
-//   // position: fixed;
-//   display: flex;
-//   flex-direction: column;
-//   top: 50%;
-//   left: 50%;
-//   z-index: 5;
-//   padding: 0 15px;
-//   justify-content: space-around;
-//   transform: translate(calc(50vw), 0);
+.comments-block__btn-mobile {
+  @include btn($dark);
+  display: none;
 
-//   button {
-//     display: none;
-//   }
-// }
+  @include phones {
+    padding: 0px 0px;
+    display: block;
+    width: 130px;
+
+    a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+      outline: none;
+    }
+  }
+}
+
+.fancybox-close-small {
+  top: 10px;
+  right: 10px;
+
+  &::after {
+    font-size: 35px;
+    color: $orange;
+  }
+
+  &:hover::after {
+    background-color: transparent;
+  }
+}

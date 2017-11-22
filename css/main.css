@@ -954,6 +954,21 @@ h6 {
         -ms-flex-align: center;
         align-items: center; } }
 
+.comments-block--full {
+  display: none;
+  max-width: 460px;
+  width: 94%;
+  background-color: #fff;
+  color: #2f3234;
+  border-radius: 7px;
+  padding: 20px;
+  padding-top: 30px; }
+  .comments-block--full .comments-block__text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
 .comments-block__title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1012,7 +1027,8 @@ h6 {
   -o-transition: .5s;
   transition: .5s;
   padding: 1px 17px;
-  width: 110px; }
+  width: 110px;
+  padding: 1px 0; }
   .comments-block__btn:hover {
     cursor: pointer;
     background-color: #1e2021; }
@@ -1025,34 +1041,58 @@ h6 {
   @media screen and (max-width: 480px) {
     .comments-block__btn {
       display: none; } }
+  .comments-block__btn a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    outline: none; }
 
 .comments-block__btn-mobile {
+  display: block;
+  border: none;
+  background-color: #2f3234;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Ubuntu';
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 35px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  padding: 1px 17px;
   display: none; }
+  .comments-block__btn-mobile:hover {
+    cursor: pointer;
+    background-color: #1e2021; }
   @media screen and (max-width: 480px) {
     .comments-block__btn-mobile {
-      display: block;
-      border: none;
-      background-color: #2f3234;
-      color: #fff;
-      text-transform: uppercase;
-      font-family: 'Ubuntu';
-      border-radius: 5px;
-      font-size: 13px;
-      font-weight: 500;
-      text-align: center;
-      line-height: 35px;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
-      transition: .5s;
-      padding: 1px 17px;
+      padding: 0 17px; } }
+  @media screen and (max-width: 480px) {
+    .comments-block__btn-mobile {
+      padding: 0px 0px;
       display: block;
       width: 130px; }
-      .comments-block__btn-mobile:hover {
-        cursor: pointer;
-        background-color: #1e2021; } }
-  @media screen and (max-width: 480px) and (max-width: 480px) {
-    .comments-block__btn-mobile {
-      padding: 0 17px; } }
+      .comments-block__btn-mobile a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        outline: none; } }
+
+.fancybox-close-small {
+  top: 10px;
+  right: 10px; }
+  .fancybox-close-small::after {
+    font-size: 35px;
+    color: #e25028; }
+  .fancybox-close-small:hover::after {
+    background-color: transparent; }
 
 .team {
   background-image: url("../img/bg/team-bg.jpg");

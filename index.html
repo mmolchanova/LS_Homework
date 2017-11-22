@@ -15,12 +15,13 @@
 <!-- Подключение карты -->
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <!-- FancyBox -->
-<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <!-- Мои стили -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
   <div class="wrapper">
     <div class="maincontant" id="fullpage">
 
@@ -37,7 +38,7 @@
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="2">бургеры</a></li>
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="3">команда</a></li>
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="4">меню</a></li>
-                <li class="nav__item"><a href="#" class="nav__link" data-goto="5">отзывы</a></li>
+                <li class="nav__item"><a href="#section6" class="nav__link" data-goto="5">отзывы</a></li>
                 <li class="nav__item"><a href="#" class="nav__link" data-goto="7">контакты</a></li>
               </ul>
             </nav>
@@ -417,18 +418,22 @@
 
       </section>
 
-      <section class="section comments">
+      <section class="section comments" id="section6">
 
             <h2 class="section__title visually-hidden">комментарии</h2>
             <ul class="comments__list">
               <li class="comments__item">
                 <div class="comments__img" style="background-image: url(img/content/photo1.jpg);">
                   <img src="img/content/photo1.jpg" alt="Photo" width="235" height="325" class="visually-hidden">
-                  <div class="comments-block comments-block--active">
+                  <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment1">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment1">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment1">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -438,8 +443,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment2">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment2">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment2">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -449,8 +458,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment3">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment3">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment3">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -460,8 +473,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment4">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment4">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment4">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -471,8 +488,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment5">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment5">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment5">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -482,8 +503,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment6">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment6">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment6">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -493,8 +518,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment7">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment7">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment7">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -504,8 +533,12 @@
                   <div class="comments-block">
                     <div class="comments-block__title">Константин Спилберг</div>
                     <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
-                    <button type="button" class="comments-block__btn">подробнее</button>
-                    <button type="button" class="comments-block__btn-mobile">читать отзыв</button>
+                    <button type="button" class="comments-block__btn"><a class="gallery2" href="#comment8">подробнее</a></button>
+                    <button type="button" class="comments-block__btn-mobile"><a class="gallery2" href="#comment8">читать отзыв</a></button>
+                  </div>
+                  <div class="comments-block--full" id="comment8">
+                    <div class="comments-block__title">Константин Спилберг</div>
+                    <div class="comments-block__text"><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p></div>
                   </div>
                 </div>
               </li>
@@ -669,7 +702,7 @@
   <script src="svg4everybody-master/dist/svg4everybody.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
 <!-- FancyBox -->
-<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <!-- Мой js -->
   <script src="js/main.js"></script>
 

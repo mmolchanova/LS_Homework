@@ -10,7 +10,7 @@ $(function() {
   let burgerBtn = $('.header__burger-btn')
   let burgerBtnBlock = $('.burger-block')
   let burgerBtnClose = $('.close-lines')
-  let fullscreenNav = $('.fullscreen-nav')
+  let fullscreenNav = $('.header__nav--fullscreen')
 
   burgerBtn.on('click', (e) => {
     burgerBtnBlock.toggleClass('visually-hidden')
@@ -78,7 +78,7 @@ $("a.modalbox").fancybox(
 }); 
 $("a.gallery2").fancybox( 
 {   
-"padding" : 25, // отступ контента от краев окна 
+"padding" : 20, // отступ контента от краев окна 
 "imageScale" : false, // Принимает значение true - контент(изображения) масштабируется по размеру окна, или false - окно вытягивается по размеру контента. По умолчанию - TRUE 
 "zoomOpacity" : false, // изменение прозрачности контента во время анимации (по умолчанию false) 
 "zoomSpeedIn" : 1000, // скорость анимации в мс при увеличении фото (по умолчанию 0) 
@@ -108,7 +108,7 @@ $("a.iframe").fancybox(
 $(function() {
   let composition = $('.burgers__composition')
 
-  $('.burgers__container').on('click', (e) => {
+  composition.on('click', (e) => {
 
     let elem = $(e.target).closest(composition)
     if (elem.length) {
@@ -162,6 +162,25 @@ $(function(){
 
     reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
     moveSlide(container, reqItem);
+  })
+
+})
+
+// Для секции "Комментарии"
+$(function() {
+  let comment = $('.comments__img')
+
+  comment.hover(function(e) {
+    let elem = $(e.target).closest(comment)
+      elem.toggleClass('comments__img--active')
+  })
+
+  comment.on('click', (e) => {
+    let elem = $(e.target).closest(comment)
+    if (elem.length) {
+      comment.removeClass('comments__img--active')
+      elem.toggleClass('comments__img--active')
+    }
   })
 
 })

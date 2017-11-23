@@ -45,7 +45,7 @@
   background-position: center center;
   background-repeat: no-repeat;
 
-  &:hover:before {
+  &--active:before {
     content: '';
     display: block;
     position: absolute;
@@ -56,7 +56,7 @@
     background: rgba(0,0,0,0.7);
   }
 
-  &:hover .comments-block {
+  &--active .comments-block {
     display: flex;
     flex-direction: column;
     justify-content: center;

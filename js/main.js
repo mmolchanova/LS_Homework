@@ -1,16 +1,34 @@
 //OPS
 $(document).ready(function() {
+  $('#fullpage').fullpage({
+    anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+  });
+  $(document).on('click', '#moveTo', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
   if (document.documentElement.clientWidth > 768) {
-    $('#fullpage').fullpage();
-  }
+      }
+
 })
+
+// //Навигация
+// $(function() {
+
+//   $('[data-goto]').on('click', (e) => {
+//     e.preventDefault();
+//     const elem = $(e.currentTarget)
+//     console.log(elem.attr('data-goto'));
+//   })
+
+// })
+
 
 // Для полноэкранного меню
 $(function() {
   let burgerBtn = $('.header__burger-btn')
   let burgerBtnBlock = $('.burger-block')
   let burgerBtnClose = $('.close-lines')
-  let fullscreenNav = $('.header__nav--fullscreen')
+  let fullscreenNav = $('.header__nav')
 
   burgerBtn.on('click', (e) => {
     burgerBtnBlock.toggleClass('visually-hidden')

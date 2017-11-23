@@ -32,18 +32,18 @@
             <div class="header__logo">
               <img src="img/logo.png" alt="Mr.Burger" class="logo__img">
             </div>
-            <nav class="header__nav header__nav--fullscreen">
-              <ul class="nav nav--fullscreen">
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="1">о нас</a></li>
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="2">бургеры</a></li>
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="3">команда</a></li>
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="4">меню</a></li>
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="5">отзывы</a></li>
-                <li class="nav__item nav__item--fullscreen"><a href="" class="nav__link nav__link--fullscreen" data-goto="7">контакты</a></li>
+            <nav class="header__nav">
+              <ul class="nav">
+                <li class="nav__item"><a href="#page2" class="nav__link">о нас</a></li>
+                <li class="nav__item"><a href="#page3" class="nav__link">бургеры</a></li>
+                <li class="nav__item"><a href="#page4" class="nav__link">команда</a></li>
+                <li class="nav__item"><a href="#page5" class="nav__link">меню</a></li>
+                <li class="nav__item"><a href="#page6" class="nav__link">отзывы</a></li>
+                <li class="nav__item"><a href="#page8" class="nav__link">контакты</a></li>
               </ul>
             </nav>
             <div class="order">
-              <button type="button" class="order__btn">заказать</button>
+              <button type="button" class="order__btn" id="moveTo">заказать</button>
             </div>
             <button type="button" class="header__burger-btn">
               <span class="burger-block">
@@ -65,7 +65,7 @@
             </div>
           </div>
 
-          <a href="#" class="arrow">
+          <a href="" class="arrow" data-goto="1">
             <svg class="arrow__img">
               <use xlink:href="img/sprite/sprite.svg#arrow-scroll" />
             </svg>

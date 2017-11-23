@@ -17,6 +17,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
    position: fixed;
    width: 100%;
+
+   @include tablets {
+    position: relative;
+   }
 }
 
 ul {

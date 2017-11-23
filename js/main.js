@@ -1,9 +1,9 @@
 //OPS
 $(document).ready(function() {
-
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
-    responsiveHeight: 651,
+    // responsiveHeight: 651,
+    responsiveWidth: 321,
     verticalCentered:false
   });
   $(document).on('click', '#moveTo', function(){
@@ -79,7 +79,7 @@ $(function() {
 })
 
 //FancyBox
-$(document).ready(function() { 
+$(function() { 
 $("a.gallery, a.iframe").fancybox(); 
 $("a.modalbox").fancybox( 
 {   

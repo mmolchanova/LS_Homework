@@ -27,6 +27,10 @@ $(function() {
     burgerBtnClose.toggleClass('visually-hidden')
 
     fullscreenNav.fadeToggle(300)
+
+    $('body').attr('overflow', 'hidden')
+    // $('html').addClass('ov-hidden')
+
   })
 })
 

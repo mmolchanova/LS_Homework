@@ -65,7 +65,9 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  width: 100%; }
 
 ul {
   margin: 0;

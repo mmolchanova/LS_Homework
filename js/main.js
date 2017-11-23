@@ -1,13 +1,18 @@
 //OPS
 $(document).ready(function() {
+let param = true
+  if (document.documentElement.clientWidth < 769) {
+param = false
+
+      }
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+    autoScrolling : param
   });
   $(document).on('click', '#moveTo', function(){
     $.fn.fullpage.moveTo('page7');
   });
-  if (document.documentElement.clientWidth > 768) {
-      }
+console.log(param)
 
 })
 

@@ -53,6 +53,12 @@
     top: 0;
     left: 0;
   }
+
+  &--active {
+    @include tablets {
+     display: flex;
+   }
+  }
 }
 
 .nav {
@@ -300,4 +306,8 @@
     font-size: 11.25vw;
     line-height: 1.1;
   }
+}
+
+.ov-hidden {
+  overflow: hidden !important;
 }

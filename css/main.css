@@ -301,6 +301,12 @@ h6 {
       overflow: hidden;
       top: 0;
       left: 0; } }
+  @media screen and (max-width: 768px) {
+    .header__nav--active {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
 
 @media screen and (max-width: 768px) {
   .nav {
@@ -624,6 +630,9 @@ h6 {
       margin-top: -9vh;
       font-size: 11.25vw;
       line-height: 1.1; } }
+
+.ov-hidden {
+  overflow: hidden !important; }
 
 .best {
   background-image: url("../img/bg/best-bg.jpg");

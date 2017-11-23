@@ -21,16 +21,25 @@ $(function() {
   let burgerBtnBlock = $('.burger-block')
   let burgerBtnClose = $('.close-lines')
   let fullscreenNav = $('.header__nav')
+  function disable() {
+        fullscreenNav.removeClass('header__nav--active')
+        burgerBtnBlock.removeClass('visually-hidden')
+        burgerBtnClose.addClass('visually-hidden')
+        $('body').removeClass('ov-hidden')
+     }
 
   burgerBtn.on('click', (e) => {
-    burgerBtnBlock.toggleClass('visually-hidden')
-    burgerBtnClose.toggleClass('visually-hidden')
-
-    fullscreenNav.fadeToggle(300)
-
-    $('body').attr('overflow', 'hidden')
-    // $('html').addClass('ov-hidden')
-
+    if (!fullscreenNav.hasClass('header__nav--active')) {
+      fullscreenNav.addClass('header__nav--active')
+      burgerBtnBlock.addClass('visually-hidden')
+      burgerBtnClose.removeClass('visually-hidden')
+      $('body').addClass('ov-hidden')
+    } else {
+      disable()
+    }
+    $('.nav__item').on('click', (e) => {
+      disable()
+    })
   })
 })
 

@@ -1,31 +1,18 @@
 //OPS
 $(document).ready(function() {
-let param = true
-  if (document.documentElement.clientWidth < 769) {
-param = false
 
-      }
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
-    autoScrolling : param
+    responsiveHeight: 651,
+    verticalCentered:false
   });
   $(document).on('click', '#moveTo', function(){
     $.fn.fullpage.moveTo('page7');
   });
-console.log(param)
+
 
 })
 
-// //Навигация
-// $(function() {
-
-//   $('[data-goto]').on('click', (e) => {
-//     e.preventDefault();
-//     const elem = $(e.currentTarget)
-//     console.log(elem.attr('data-goto'));
-//   })
-
-// })
 
 
 // Для полноэкранного меню

@@ -20,14 +20,10 @@
 
 .burgers__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 85.5%;
   // flex: 0 0 auto;
   height: 100vh;
   position: relative;
-  overflow: hidden;
 
   @include tablets {
     width: 79%;
@@ -37,6 +33,18 @@
   @include phones {
     width: 84%;
   }
+}
+
+.burgers__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // flex: 0 0 auto;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .burgers__list {

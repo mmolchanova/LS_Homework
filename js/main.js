@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
     menu: '#menu',
-    responsiveWidth: 481,
+    responsiveWidth: 769,
     verticalCentered:false
   });
   $(document).on('click', '#moveTo', function(){
@@ -25,14 +25,22 @@ $(function() {
         burgerBtnBlock.removeClass('visually-hidden')
         burgerBtnClose.addClass('visually-hidden')
         $('body').removeClass('ov-hidden')
+        fullscreenNav.css('height', '100%')
      }
 
   burgerBtn.on('click', (e) => {
     if (!fullscreenNav.hasClass('header__nav--active')) {
       fullscreenNav.addClass('header__nav--active')
+      fullscreenNav.css('height', $('.section').css('height'))
       burgerBtnBlock.addClass('visually-hidden')
       burgerBtnClose.removeClass('visually-hidden')
       $('body').addClass('ov-hidden')
+
+      // $(document).on('wheel', (e) => {
+      //   e.preventDefault()
+      //     console.log('wheeeel')
+      // })
+
     } else {
       disable()
     }
@@ -130,7 +138,7 @@ $("a.iframe").fancybox(
 $(function() {
   let composition = $('.burgers__composition')
 
-  composition.on('click', (e) => {
+  $('.burgers__container').on('click', (e) => {
 
     let elem = $(e.target).closest(composition)
     if (elem.length) {
@@ -164,7 +172,7 @@ $(function(){
     }
   }
 
-  $('.slider-arrow').on('click', (e) => {
+  $('.slider-arrow__btn').on('click', (e) => {
     e.preventDefault();
 
     let $this = $(e.currentTarget),
@@ -173,11 +181,11 @@ $(function(){
         activeItem = items.filter('.burgers__content--active'),
         existedItem, edgeItem, reqItem;
 
-    if ($this.hasClass('slider-arrow--next')) {
+    if ($this.hasClass('slider-arrow__btn--next')) {
       existedItem = activeItem.next();
       edgeItem = items.first();
     }
-    if ($this.hasClass('slider-arrow--prev')) {
+    if ($this.hasClass('slider-arrow__btn--prev')) {
       existedItem = activeItem.prev();
       edgeItem = items.last();
     }

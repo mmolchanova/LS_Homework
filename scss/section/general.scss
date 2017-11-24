@@ -44,7 +44,7 @@
 
   @include tablets {
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(#2f3234, .99);
@@ -137,6 +137,12 @@
 
 }
 
+.order {
+  @include tablets {
+    margin-right: calc(11.7% + 25px);
+  }
+}
+
 .order__btn {
   @include btn($orange);
 }
@@ -145,12 +151,13 @@
   display: none;
   border: none;
   background-color: transparent;
-  margin: 6px 3.5% 0 3.1%;
+  right:5%;
+  top: 30px;
   z-index: 4;
   outline: none;
   width: 25px;
   height: 27px;
-  position: relative;
+  position: fixed;
 
   @include tablets {
     display: flex;
@@ -199,6 +206,10 @@
   }
 }
 
+.burger-block {
+  position: relative;
+}
+
 .burger-block__line {
   background-color: #fff;
   display: block;
@@ -206,6 +217,7 @@
   height: 4px;
   border-radius: 2px;
   margin-bottom: 5px;
+  box-shadow: 1px -1px 10px rgba($dark, 0.7);
 }
 
 .general__content {
@@ -309,5 +321,6 @@
 }
 
 .ov-hidden {
+  position: fixed;
   overflow: hidden !important;
 }

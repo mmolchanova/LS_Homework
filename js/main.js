@@ -14,24 +14,24 @@ $(document).ready(function() {
 
 // Для полноэкранного меню
 $(function() {
-  let burgerBtn = $('.header__burger-btn')
-  let burgerBtnBlock = $('.burger-block')
-  let burgerBtnClose = $('.close-lines')
+  let hamburgerBtn = $('.hamburger')
+  let hamburgerBtnBlock = $('.hamburger-block')
+  let hamburgerBtnClose = $('.hamburger__close-lines')
   let fullscreenNav = $('.header__nav')
+  let sectionHeight = $('.section').css('height')
   function disable() {
-        fullscreenNav.removeClass('header__nav--active')
-        burgerBtnBlock.removeClass('visually-hidden')
-        burgerBtnClose.addClass('visually-hidden')
+        fullscreenNav.animate({height:0, opacity:0}, 400, function() {$(this).removeClass('header__nav--active')})
+        hamburgerBtnBlock.removeClass('visually-hidden')
+        hamburgerBtnClose.addClass('visually-hidden')
         $('body').removeClass('ov-hidden')
-        fullscreenNav.css('height', '100%')
      }
 
-  burgerBtn.on('click', (e) => {
+  hamburgerBtn.on('click', (e) => {
     if (!fullscreenNav.hasClass('header__nav--active')) {
-      fullscreenNav.css('height', $('.section').css('height'))
       fullscreenNav.addClass('header__nav--active')
-      burgerBtnBlock.addClass('visually-hidden')
-      burgerBtnClose.removeClass('visually-hidden')
+      fullscreenNav.animate({height:sectionHeight, opacity:1}, 200)
+      hamburgerBtnBlock.addClass('visually-hidden')
+      hamburgerBtnClose.removeClass('visually-hidden')
       $('body').addClass('ov-hidden')
 
       // $(document).on('wheel', (e) => {
@@ -137,7 +137,7 @@ $(function() {
 
   $('.menu').on('click', (e) => {
     e.preventDefault()
-    $('.header__burger-btn').fadeToggle(300)
+    $('.hamburger').fadeToggle(300)
     let elem = $(e.target).closest(menuItemAcc)
 
     if (elem.length) {

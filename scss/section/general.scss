@@ -42,21 +42,25 @@
 .header__nav {
   margin-right: 13px;
   transition: 1s;
+  display: flex;
+  height: 100%;
+  opacity: 1;
+
   @include tablets {
     display: none;
     position: fixed;
     width: 100%;
-    height: 100%;
     background-color: rgba(#2f3234, .99);
     z-index: 3;
     overflow: hidden;
     top: 0;
     left: 0;
+    height: 0;
+    opacity: 0;
   }
 
   &--active {
     @include tablets {
-      // height: 0;
       display: flex;
    }
   }
@@ -148,7 +152,7 @@
   @include btn($orange);
 }
 
-.header__burger-btn {
+.hamburger {
   display: none;
   border: none;
   background-color: transparent;
@@ -175,14 +179,14 @@
     transition: 0.2s;
   }
 
-  &:hover .burger-block__line {
+  &:hover .hamburger-block__line {
     height: 5px;
     border-radius: 2.5px;
     transition: 0.2s;
   }
 }
 
-.close-lines {
+.hamburger__close-lines {
   width: 100%;
   height: 100%;
   display: block;
@@ -207,11 +211,11 @@
   }
 }
 
-.burger-block {
+.hamburger-block {
   position: relative;
 }
 
-.burger-block__line {
+.hamburger-block__line {
   background-color: #fff;
   display: block;
   width: 25px;

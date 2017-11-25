@@ -41,7 +41,7 @@
 
 .header__nav {
   margin-right: 13px;
-
+  transition: 1s;
   @include tablets {
     display: none;
     position: fixed;
@@ -56,7 +56,8 @@
 
   &--active {
     @include tablets {
-     display: flex;
+      // height: 0;
+      display: flex;
    }
   }
 }

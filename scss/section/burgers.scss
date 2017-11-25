@@ -86,23 +86,30 @@
   flex-basis: 50%;
   flex-direction: column;
   margin-top: 2%;
+  max-width: 100%;
+  width: 100%;
 
   @include tablets {
     margin: 0;
     align-items: center;
-    max-width: 100%;
     flex-basis: initial;
   }
 }
 
 .burgers__img-pic {
   max-width: 100%;
-  width: 100;
+  width: 100%;
   display: flex;
+  max-height: 100%;
+
+  @include tablets {
+    width: 80%;
+    max-width: 80%;
+  }
 
   @include phones {
-    width: 92%;
-    max-width: 92%;
+    width:97%;
+    max-width: 97%;
     // max-height: 42vh;
   }
 }
@@ -118,12 +125,12 @@
     align-items: center;
     text-align: center;
     padding: 0;
-    margin-top: 4.2vh;
+    margin-top: 4vh;
+    margin-bottom: 4.3vh;
   }
 
   @include phones {
     width: 100%;
-    margin-top: 3vh;
     margin-bottom: 1vh;
   }
 }
@@ -135,6 +142,7 @@
 
   @include tablets {
     line-height: 0.85;
+    font-size: 9.5vw;
   }
 
   @include phones {
@@ -265,10 +273,7 @@
 
   @include tablets {
     width: 310px;
-  }
-
-  @include phones {
-    width: calc(100vw - 100px);
+    max-width: calc(100vw - 100px);
   }
 }
 
@@ -282,7 +287,7 @@
   @include tablets {
     width: 260px;
     max-width: calc(100vw - 130px);
-    margin: 0;
+    margin: 10px 0;
   }
 }
 

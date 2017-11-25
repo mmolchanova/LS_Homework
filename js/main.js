@@ -12,8 +12,6 @@ $(document).ready(function() {
 
 })
 
-
-
 // Для полноэкранного меню
 $(function() {
   let burgerBtn = $('.header__burger-btn')
@@ -30,8 +28,8 @@ $(function() {
 
   burgerBtn.on('click', (e) => {
     if (!fullscreenNav.hasClass('header__nav--active')) {
-      fullscreenNav.addClass('header__nav--active')
       fullscreenNav.css('height', $('.section').css('height'))
+      fullscreenNav.addClass('header__nav--active')
       burgerBtnBlock.addClass('visually-hidden')
       burgerBtnClose.removeClass('visually-hidden')
       $('body').addClass('ov-hidden')
@@ -49,89 +47,6 @@ $(function() {
     })
   })
 })
-
-// Для секции "команда"
-$(function() {
-  let teamItemAcc = $('.team__item')
-
-  teamItemAcc.on('click', (e) => {
-    e.preventDefault()
-
-    let elem = $(e.currentTarget)
-
-    if (elem.hasClass('team__item--active')) {
-      elem.removeClass('team__item--active')
-    }
-    else {
-      teamItemAcc.removeClass('team__item--active')
-      elem.addClass('team__item--active')
-    }
-  })
-})
-
-// Для секции "меню"
-$(function() {
-  let menuItemAcc = $('.menu__item')
-  let menuClose = $('.menu-content__close')
-
-  $('.menu').on('click', (e) => {
-    e.preventDefault()
-
-    let elem = $(e.target).closest(menuItemAcc)
-
-    if (elem.length) {
-      elem.siblings().removeClass('menu__item--active')
-      elem.toggleClass('menu__item--active')
-    } else {
-      menuItemAcc.removeClass('menu__item--active')
-    }
-
-  })
-
-  menuClose.on('click', (e) => {
-    let elem = $(e.currentTarget)
-
-    if (elem.hasClass('menu__item--active')) {
-      elem.removeClass('menu__item--active')
-    }
-  })
-
-})
-
-//FancyBox
-$(function() { 
-$("a.gallery, a.iframe").fancybox(); 
-$("a.modalbox").fancybox( 
-{   
-"frameWidth" : 400,   
-"frameHeight" : 400   
-}); 
-$("a.gallery2").fancybox( 
-{   
-"padding" : 20, // отступ контента от краев окна 
-"imageScale" : false, // Принимает значение true - контент(изображения) масштабируется по размеру окна, или false - окно вытягивается по размеру контента. По умолчанию - TRUE 
-"zoomOpacity" : false, // изменение прозрачности контента во время анимации (по умолчанию false) 
-"zoomSpeedIn" : 1000, // скорость анимации в мс при увеличении фото (по умолчанию 0) 
-"zoomSpeedOut" : 1000, // скорость анимации в мс при уменьшении фото (по умолчанию 0) 
-"zoomSpeedChange" : 1000, // скорость анимации в мс при смене фото (по умолчанию 0) 
-"frameWidth" : 700, // ширина окна, px (425px - по умолчанию) 
-"frameHeight" : 600, // высота окна, px(355px - по умолчанию) 
-"overlayShow" : true, // если true затеняят страницу под всплывающим окном. (по умолчанию true). Цвет задается в jquery.fancybox.css - div#fancy_overlay   
-"overlayOpacity" : 0.8, // Прозрачность затенения (0.3 по умолчанию) 
-"hideOnContentClick" :false, // Если TRUE закрывает окно по клику по любой его точке (кроме элементов навигации). Поумолчанию TRUE   
-"centerOnScroll" : false // Если TRUE окно центрируется на экране, когда пользователь прокручивает страницу   
-
-});   
-$("#menu a, .anim").hover( function() { 
-$(this).animate({"paddingLeft" : "10px"}, 300)}, 
-function() {$(this).animate({"paddingLeft" : "0"}, 300); 
-}); 
-$("a.iframe").fancybox( 
-{   
-"frameWidth" : 800, // ширина окна, px (425px - по умолчанию) 
-"frameHeight" : 600 // высота окна, px(355px - по умолчанию)   
-}); 
-}); 
 
 // Для секции "Бургер"
   //Состав
@@ -195,6 +110,89 @@ $(function(){
   })
 
 })
+
+// Для секции "команда"
+$(function() {
+  let teamItemAcc = $('.team__item')
+
+  teamItemAcc.on('click', (e) => {
+    e.preventDefault()
+
+    let elem = $(e.currentTarget)
+
+    if (elem.hasClass('team__item--active')) {
+      elem.removeClass('team__item--active')
+    }
+    else {
+      teamItemAcc.removeClass('team__item--active')
+      elem.addClass('team__item--active')
+    }
+  })
+})
+
+// Для секции "меню"
+$(function() {
+  let menuItemAcc = $('.menu__item')
+  let menuClose = $('.menu-content__close')
+
+  $('.menu').on('click', (e) => {
+    e.preventDefault()
+    $('.header__burger-btn').fadeToggle(300)
+    let elem = $(e.target).closest(menuItemAcc)
+
+    if (elem.length) {
+      elem.siblings().removeClass('menu__item--active')
+      elem.toggleClass('menu__item--active')
+    } else {
+      menuItemAcc.removeClass('menu__item--active')
+    }
+
+  })
+
+  menuClose.on('click', (e) => {
+    let elem = $(e.currentTarget)
+
+    if (elem.hasClass('menu__item--active')) {
+      elem.removeClass('menu__item--active')
+    }
+  })
+
+})
+
+//FancyBox
+$(function() { 
+  $("a.gallery, a.iframe").fancybox(); 
+  $("a.modalbox").fancybox( 
+  {   
+    "frameWidth" : 400,   
+    "frameHeight" : 400   
+  }); 
+  $("a.gallery2").fancybox( 
+  {   
+    "padding" : 20, // отступ контента от краев окна 
+    "imageScale" : false, // Принимает значение true - контент(изображения) масштабируется по размеру окна, или false - окно вытягивается по размеру контента. По умолчанию - TRUE 
+    "zoomOpacity" : false, // изменение прозрачности контента во время анимации (по умолчанию false) 
+    "zoomSpeedIn" : 1000, // скорость анимации в мс при увеличении фото (по умолчанию 0) 
+    "zoomSpeedOut" : 1000, // скорость анимации в мс при уменьшении фото (по умолчанию 0) 
+    "zoomSpeedChange" : 1000, // скорость анимации в мс при смене фото (по умолчанию 0) 
+    "frameWidth" : 700, // ширина окна, px (425px - по умолчанию) 
+    "frameHeight" : 600, // высота окна, px(355px - по умолчанию) 
+    "overlayShow" : true, // если true затеняят страницу под всплывающим окном. (по умолчанию true). Цвет задается в jquery.fancybox.css - div#fancy_overlay   
+    "overlayOpacity" : 0.8, // Прозрачность затенения (0.3 по умолчанию) 
+    "hideOnContentClick" :false, // Если TRUE закрывает окно по клику по любой его точке (кроме элементов навигации). Поумолчанию TRUE   
+    "centerOnScroll" : false // Если TRUE окно центрируется на экране, когда пользователь прокручивает страницу   
+  });   
+  $("#menu a, .anim").hover( function() { 
+  $(this).animate({"paddingLeft" : "10px"}, 300)}, 
+  function() {$(this).animate({
+    "paddingLeft" : "0"}, 300); 
+  }); 
+  $("a.iframe").fancybox( 
+  {   
+    "frameWidth" : 800, // ширина окна, px (425px - по умолчанию) 
+    "frameHeight" : 600 // высота окна, px(355px - по умолчанию)   
+  }); 
+}); 
 
 // Для секции "Комментарии"
 $(function() {

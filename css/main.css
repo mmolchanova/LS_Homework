@@ -1083,7 +1083,8 @@ h6 {
   padding: 1px 17px;
   outline: none;
   width: 110px;
-  padding: 1px 0; }
+  padding: 1px 0;
+  text-decoration: none; }
   .comments-block__btn:hover {
     cursor: pointer;
     background-color: #1e2021; }
@@ -1096,13 +1097,6 @@ h6 {
   @media screen and (max-width: 497px) {
     .comments-block__btn {
       display: none; } }
-  .comments-block__btn a {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    outline: none; }
 
 .comments-block__btn-mobile {
   display: block;
@@ -1132,14 +1126,8 @@ h6 {
     .comments-block__btn-mobile {
       padding: 0px 0px;
       display: block;
-      width: 130px; }
-      .comments-block__btn-mobile a {
-        display: inline-block;
-        color: #fff;
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        outline: none; } }
+      width: 130px;
+      text-decoration: none; } }
 
 .fancybox-close-small {
   top: 10px;

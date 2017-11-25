@@ -6,10 +6,24 @@ $(document).ready(function() {
     responsiveWidth: 769,
     verticalCentered:false
   });
-  $(document).on('click', '#moveTo', function(){
+  $(document).on('click', '#moveToGeneral', function(){
     $.fn.fullpage.moveTo('page7');
   });
-
+  $(document).on('click', '#moveTo1', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
+  $(document).on('click', '#moveTo2', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
+  $(document).on('click', '#moveTo3', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
+  $(document).on('click', '#moveTo4', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
+  $(document).on('click', '#moveTo5', function(){
+    $.fn.fullpage.moveTo('page7');
+  });
 })
 
 // Для полноэкранного меню

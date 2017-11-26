@@ -101,6 +101,7 @@
   margin-top: 2%;
   max-width: 50%;
   width: 50%;
+  flex: 0 0 auto;
 
   @include tablets {
     max-width: 100%;

@@ -121,11 +121,20 @@
 }
 
 .item-content {
-  display: flex;
   height: 0;
-  flex: 0 0 auto;
   overflow: hidden;
   transition: .3s;
+}
+
+.item-content__wrapper {
+  display: flex;
+  height: 100%;
+  flex: 0 0 auto;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team__item--active {
@@ -152,8 +161,6 @@
 
     @include tablets {
       height: 208px; 
-      flex-direction: column;
-      align-items: center;
       margin-top: -1vh;
       margin-bottom: 1.5vh;
     }

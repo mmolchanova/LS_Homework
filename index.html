@@ -9,6 +9,10 @@
 
 <!-- Подключение jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script> -->
 <!-- Подключение OPS -->
   <link rel="stylesheet" href="fullpage/dist/jquery.fullpage.css" />
   <script src="fullpage/dist/jquery.fullpage.js"></script>
@@ -549,69 +553,71 @@
           <div class="order__content">
             <h2 class="section__title section__title--yellow section__title--order">Закажите доставку</h2>
             <div class="form">
-              <form action="#" class="form__elem">
-                <div class="form__col">
-                  <div class="form__row">
-                    <div class="form__block">
-                      <label for="name" class="form__label form__input-label">Имя</label>
-                      <input type="text" class="form__input" id="name" name="name">
-                    </div>
-                    <div class="form__block">
-                      <label for="phone" class="form__label form__input-label">Телефон</label>
-                      <input type="text" class="form__input" id="phone" name="phone">
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__block">
-                      <label for="street" class="form__label form__input-label">Улица</label>
-                      <input type="text" class="form__input" id="street" name="street">
-                    </div>
-                  </div>
-                  <div class="form__row">
-                    <div class="form__block">
-                      <label for="house" class="form__label form__input-label">Дом</label>
-                      <input type="text" class="form__input" id="house" name="house">
-                    </div>
-                    <div class="form__block">
-                      <label for="part" class="form__label form__input-label">Корпус</label>
-                      <input type="text" class="form__input" id="part" name="part">
-                    </div>
-                    <div class="form__block">
-                      <label for="apartment" class="form__label form__input-label">Квартира</label>
-                      <input type="text" class="form__input" id="apartment" name="apartment">
-                    </div>
-                    <div class="form__block form__block--no-phones">
-                      <label for="floor" class="form__label form__input-label">Этаж</label>
-                      <input type="text" class="form__input" id="floor" name="floor">
-                    </div>
-                  </div>
-                </div>
-                <div class="form__col">
-                  <div class="form__block-textarea">
-                    <label class="form__label form__textarea-label" for="comment">Комментарий</label>
-                    <textarea class="form__input form__textarea" name="comment" id="comment"></textarea>
-                  </div>
-                  <div class="form__buttons">
-                    <div class="buttons__row buttons__row--radio">
-                      <div class="buttons__radio">
-                        <input type="radio" class="buttons__radio-elem visually-hidden" name="paymant" id="cash">
-                        <label for="cash" class="form__label buttons__radio-label">Потребуется сдача</label>
+              <form action="server.php" method="post" id="order-form" class="form__elem">
+                <div class="form__wrapper">
+                  <div class="form__col">
+                    <div class="form__row">
+                      <div class="form__block">
+                        <label for="name" class="form__label form__input-label">Имя</label>
+                        <input type="text" class="form__input" id="name" name="name">
                       </div>
-                      <div class="buttons__radio">
-                        <input type="radio" class="buttons__radio-elem visually-hidden" name="paymant" id="card" checked="checked">
-                        <label for="card" class="form__label buttons__radio-label">Оплата по карте</label>
+                      <div class="form__block">
+                        <label for="phone" class="form__label form__input-label">Телефон</label>
+                        <input type="text" class="form__input" id="phone" name="phone">
                       </div>
                     </div>
-                    <div class="buttons__row">
-                      <div class="buttons__check">
-                        <input type="checkbox" class="buttons__check-elem visually-hidden" name="callback" checked="checked" id="callback">
-                        <label for="callback" class="form__label buttons__check-label">Не перезванивать</label>
+                    <div class="form__row">
+                      <div class="form__block">
+                        <label for="street" class="form__label form__input-label">Улица</label>
+                        <input type="text" class="form__input" id="street" name="street">
                       </div>
                     </div>
-                    <div class="buttons__row">
-                      <div class="buttons__btn">
-                        <input type="submit" class="buttons__btn-elem" name="order" value="Заказать">
-                        <input type="reset" class="buttons__btn-elem-reset" name="reset" value="Очистить">
+                    <div class="form__row">
+                      <div class="form__block">
+                        <label for="house" class="form__label form__input-label">Дом</label>
+                        <input type="text" class="form__input" id="house" name="house">
+                      </div>
+                      <div class="form__block">
+                        <label for="part" class="form__label form__input-label">Корпус</label>
+                        <input type="text" class="form__input" id="part" name="part">
+                      </div>
+                      <div class="form__block">
+                        <label for="apartment" class="form__label form__input-label">Квартира</label>
+                        <input type="text" class="form__input" id="apartment" name="apartment">
+                      </div>
+                      <div class="form__block form__block--no-phones">
+                        <label for="floor" class="form__label form__input-label">Этаж</label>
+                        <input type="text" class="form__input" id="floor" name="floor">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__block-textarea">
+                      <label class="form__label form__textarea-label" for="comment">Комментарий</label>
+                      <textarea class="form__input form__textarea" name="comment" id="comment"></textarea>
+                    </div>
+                    <div class="form__buttons">
+                      <div class="buttons__row buttons__row--radio">
+                        <div class="buttons__radio">
+                          <input type="radio" class="buttons__radio-elem visually-hidden" name="payment" id="cash" value="Наличные">
+                          <label for="cash" class="form__label buttons__radio-label">Потребуется сдача</label>
+                        </div>
+                        <div class="buttons__radio">
+                          <input type="radio" class="buttons__radio-elem visually-hidden" name="payment" id="card" checked="checked" value="Карта">
+                          <label for="card" class="form__label buttons__radio-label">Оплата по карте</label>
+                        </div>
+                      </div>
+                      <div class="buttons__row">
+                        <div class="buttons__check">
+                          <input type="checkbox" class="buttons__check-elem visually-hidden" name="callback" checked="checked" id="callback" value="1">
+                          <label for="callback" class="form__label buttons__check-label">Не перезванивать</label>
+                        </div>
+                      </div>
+                      <div class="buttons__row">
+                        <div class="buttons__btn">
+                          <input type="submit" class="buttons__btn-elem" name="order" value="Заказать">
+                          <input type="reset" class="buttons__btn-elem-reset" name="reset" value="Очистить">
+                        </div>
                       </div>
                     </div>
                   </div>

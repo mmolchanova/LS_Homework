@@ -34,16 +34,19 @@ $(function() {
   let fullscreenNav = $('.header__nav')
   let sectionHeight = $('.section').css('height')
   function disable() {
-        fullscreenNav.animate({height:0, opacity:0}, 400, function() {$(this).removeClass('header__nav--active')})
-        hamburgerBtnBlock.removeClass('visually-hidden')
-        hamburgerBtnClose.addClass('visually-hidden')
-        $('body').removeClass('ov-hidden')
-     }
+    fullscreenNav.animate({opacity:0}, 200, function() {
+      $(this).css('height', 0).removeClass('header__nav--active')
+    })
+    hamburgerBtnBlock.removeClass('visually-hidden')
+    hamburgerBtnClose.addClass('visually-hidden')
+    $('body').removeClass('ov-hidden')
+ }
 
   hamburgerBtn.on('click', (e) => {
     if (!fullscreenNav.hasClass('header__nav--active')) {
       fullscreenNav.addClass('header__nav--active')
-      fullscreenNav.animate({height:sectionHeight, opacity:1}, 200)
+      fullscreenNav.css('height', sectionHeight)
+      fullscreenNav.animate({opacity:1}, 100)
       hamburgerBtnBlock.addClass('visually-hidden')
       hamburgerBtnClose.removeClass('visually-hidden')
       $('body').addClass('ov-hidden')
@@ -151,10 +154,15 @@ $(function() {
 
   $('.menu').on('click', (e) => {
     e.preventDefault()
+
+  if (document.documentElement.clientWidth < 481) {
     $('.hamburger').fadeToggle(300)
+  }
+
     let elem = $(e.target).closest(menuItemAcc)
 
     if (elem.length) {
+
       elem.siblings().removeClass('menu__item--active')
       elem.toggleClass('menu__item--active')
     } else {
@@ -168,6 +176,26 @@ $(function() {
 
     if (elem.hasClass('menu__item--active')) {
       elem.removeClass('menu__item--active')
+    }
+  })
+
+})
+
+
+// Для секции "Комментарии"
+$(function() {
+  let comment = $('.comments__img')
+
+  comment.hover(function(e) {
+    let elem = $(e.target).closest(comment)
+      elem.toggleClass('comments__img--active')
+  })
+
+  comment.on('click', (e) => {
+    let elem = $(e.target).closest(comment)
+    if (elem.length) {
+      comment.removeClass('comments__img--active')
+      elem.toggleClass('comments__img--active')
     }
   })
 
@@ -207,25 +235,6 @@ $(function() {
     "frameHeight" : 600 // высота окна, px(355px - по умолчанию)   
   }); 
 }); 
-
-// Для секции "Комментарии"
-$(function() {
-  let comment = $('.comments__img')
-
-  comment.hover(function(e) {
-    let elem = $(e.target).closest(comment)
-      elem.toggleClass('comments__img--active')
-  })
-
-  comment.on('click', (e) => {
-    let elem = $(e.target).closest(comment)
-    if (elem.length) {
-      comment.removeClass('comments__img--active')
-      elem.toggleClass('comments__img--active')
-    }
-  })
-
-})
 
 // Для секции "карта"
 $(function() {
@@ -274,3 +283,41 @@ $(function() {
   }
 })
 
+
+//Для секции "Заказ"
+$(function() {
+  let submitForm = function (e) {
+    e.preventDefault();
+
+    let form = $(e.target),
+        data = form.serialize(),
+        url = form.attr('action');
+
+    let request = $.ajax({
+      url: url,
+      type: 'POST',
+      data: data,
+      dataType: 'JSON'
+    });
+
+    request.done(function(msg) {
+      let mes = msg.mes,
+          status = msg.status;
+
+      if (status === 'ОК') {
+        form.append('<p class="success">' + mes +'</p>');
+      } else {
+        form.append('<p class="error">' + mes +'</p>');
+      }
+    });
+
+    request.fail(function(jqXHR, textStatus) {
+      alert("Request failed: " + textStatus);
+    });
+
+  };
+
+
+  $('#order-form').on('submit', submitForm);
+
+})

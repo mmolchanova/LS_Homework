@@ -57,6 +57,12 @@
 .form__elem {
   display: flex;
   width: 100%;
+  flex-direction: column;
+}
+
+.form__wrapper {
+  display: flex;
+  width: 100%;
 
   @include tablets {
     flex-direction: column;
@@ -329,3 +335,11 @@
     border: 1px solid #fff;
   }
 }
+
+.success {
+  color: #fff;
+  }
+
+.error {
+  color: red;
+  }

@@ -2,11 +2,11 @@
   background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  // position: relative;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .burgers__wrapper {
@@ -16,12 +16,14 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .burgers__container {
   display: flex;
   width: 85.5%;
-  // flex: 0 0 auto;
+  flex: 0 0 auto;
   height: 100vh;
   position: relative;
 
@@ -41,7 +43,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  // flex: 0 0 auto;
+  flex: 0 0 auto;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -53,25 +55,36 @@
   max-width: 100%;
   font-size: 0;
   position: absolute;
-  left: center;
-  top: center;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 100%;
+
+
+  @include tablets {
+    height: auto;
+    bottom: 8vh;
+    top: initial;
+    align-items: flex-end;
+  }
 
   @include phones {
-    bottom: 0;
+    bottom: 7.5vh
   }
 }
 
 .burgers__content {
   width: 100%;
   display: inline-flex;
+  flex: 0 0 auto;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   position: relative;
   flex: 0 0 auto;
-  white-space: initial;
-  margin-top: -8vh;
+  white-space: normal;
+
   @include tablets {
     flex-direction: column;
     justify-content: space-between;
@@ -86,10 +99,12 @@
   flex-basis: 50%;
   flex-direction: column;
   margin-top: 2%;
-  max-width: 100%;
-  width: 100%;
+  max-width: 50%;
+  width: 50%;
 
   @include tablets {
+    max-width: 100%;
+    width: 100%;
     margin: 0;
     align-items: center;
     flex-basis: initial;
@@ -139,6 +154,7 @@
   line-height: 0.9;
   width: 100%;
   flex: 0 0 auto;
+  white-space: normal;
 
   @include tablets {
     line-height: 0.85;
@@ -162,6 +178,8 @@
   margin-top: -23px;
   width: 100%;
   margin-bottom: 26px;
+  white-space: normal;
+  max-width: 100%;
 
   @include tablets {
     margin-bottom: 3.5vh;

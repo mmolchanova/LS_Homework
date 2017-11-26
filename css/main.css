@@ -2323,7 +2323,8 @@ h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 100%; }
+  max-height: 70vh;
+  min-height: 100%; }
   @media screen and (max-width: 768px) {
     .burgers__img-pic {
       width: 80%;

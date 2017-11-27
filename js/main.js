@@ -258,9 +258,9 @@ $(function () {
           status = msg.status;
 
       if (status === 'ОК') {
-        form.append('<p class="success">' + mes + '</p>');
+        $.fancybox.open({src :'<p class="gallery2">' + mes + '</p>', type: 'html'});
       } else {
-        form.append('<p class="error">' + mes + '</p>');
+        $.fancybox.open({src: '<p class="gallery2 error">' + mes + '</p>', type: 'html'});
       }
     });
 

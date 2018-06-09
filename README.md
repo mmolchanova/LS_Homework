@@ -10,4 +10,4 @@
 
 **Курс**: Веб для начинающих (10.2017)
 
-**Сайт**: https://mmolchanova.github.io/LS_Homework/
+**Сайт**: http://cy01273.tmweb.ru/mrburger/

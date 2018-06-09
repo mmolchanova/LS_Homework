@@ -1,6 +1,7 @@
 # LS_Homework
 
-Выпускной проект для LoftSchool
+Выпускной проект для LoftSchool.
+Лэндинг для магазина бургеров с использованием One Page Scroll плагина fullPage.js
 
 -------
 
